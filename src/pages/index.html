@@ -13,12 +13,13 @@
 
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
+
+    <!-- Meta -->
+    <title>YDITS公式サイト</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="利用者に最適な防災情報を迅速に提供するサービス『YDITS』の公式サイトです。">
     <meta name="keywords" content="YDITS">
     <meta name="color-scheme" content="dark">
-
-    <title>YDITS公式サイト</title>
 
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/">
@@ -26,6 +27,7 @@
     <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/">
     <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/">
 
+    <!-- OGP -->
     <meta property="og:url" content="https://www.ydits.net/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="YDITS公式サイト">
@@ -34,22 +36,31 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@YDITS_JP">
 
-    <base href="https://www.ydits.net/">
-
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./Styles/ui.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/ui.css">
     <link rel="stylesheet" href="./Styles/index.css">
 
+    <!-- Scripts -->
+    <script src="/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="/Scripts/common.js"></script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL=/noscript/">
+    </noscript>
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -59,38 +70,15 @@
         gtag('config', 'G-DFN4DKGM3F');
     </script>
 
-    <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
-            crossorigin="anonymous">
-    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
+        crossorigin="anonymous">
+        </script>
 
-    <script src="./Scripts/jquery-3.6.0.min.js"></script>
-    <script src="./Scripts/common.js"></script>
-    <noscript>
-        <meta http-equiv="refresh" content="0; URL=./noscript/">
-    </noscript>
 </head>
 
 <body>
-    <header>
-        <div class="content">
-            <a id="headerLogo" href="./">
-                <img src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png" alt="YDITS icon">
-            </a>
-
-            <div id="headerMenuButton">
-                <span class="material-symbols-outlined open">menu</span>
-                <span class="material-symbols-outlined close">close</span>
-            </div>
-
-            <nav id="headerMenu">
-                <ul>
-                    <li><a href="./">ホーム</a></li>
-                    <li><a href="https://www.yoneyo.com/#contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header></header>
 
     <main>
         <article id="hero">
@@ -124,7 +112,7 @@
                 <h2 class="sectionTitle">最新情報</h2>
 
                 <div class="link">
-                    <a class="link-button" href="./news/">
+                    <a class="link-button" href="/news/">
                         <div class="wrapper">
                             最新情報一覧
                             <span class="material-symbols-outlined">
@@ -139,7 +127,7 @@
                 <h2 class="sectionTitle">アプリ</h2>
 
                 <div class="link">
-                    <a class="link-button" href="./apps/web/">
+                    <a class="link-button" href="/apps/web/">
                         <div class="wrapper">
                             Web版
                             <span class="material-symbols-outlined">
@@ -209,21 +197,17 @@
                 </div>
             </section>
 
-            <!-- AdSense -->
+            <!-- Google AdSense -->
             <section class="sections adsense">
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-4842259448644646"
-                     data-ad-slot="6212268717"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4842259448644646"
+                    data-ad-slot="6212268717" data-ad-format="auto" data-full-width-responsive="true">
                 </ins>
 
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </section>
-            <!-- /AdSense -->
+            <!-- /Google AdSense -->
         </article>
     </main>
 
