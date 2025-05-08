@@ -16,4 +16,4 @@ Published at https://www.ydits.net/ .
 
 No licensed.
 
-Copyright (C) よね/Yone
+Copyright &copy; よね/Yone

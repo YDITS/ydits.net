@@ -16,4 +16,4 @@ https://www.ydits.net/ で公開しています。
 
 ライセンスなし。
 
-Copyright (C) よね/Yone
+Copyright &copy; よね/Yone
