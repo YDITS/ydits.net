@@ -1,10 +1,10 @@
-# YDITS Website
+# YDITS™ Website
 
 > [YDITS website](https://www.ydits.net/) is the YDITS official website.
 
-## About YDITS
+## About YDITS™
 
-YDITS is the service that quickly provides users with optimal disaster prevention information.
+YDITS™ is the service that quickly provides users with optimal disaster prevention information.
 
 ### Operator of YDITS
 
@@ -19,22 +19,22 @@ Application development, Disaster prevention services.
 
 ## Applications by YDITS
 
-- YDITS for Web
-- YDITS for Desktop
-- YDITS for Mobile
+- YDITS™ for Web
+- YDITS™ for Desktop
+- YDITS™ for Mobile
 
-### YDITS for Web
+### YDITS™ for Web
 
 - [YDITS for Web Website](https://www.ydits.net/apps/web/)
 - [YDITS for Web Application](https://webapp.ydits.net/)
 
-### YDITS for Desktop
+### YDITS™ for Desktop
 
 - [YDITS for Desktop Website](https://www.ydits.net/apps/desktop/)
 
 Developing.
 
-### YDITS for Mobile
+### YDITS™ for Mobile
 
 - [YDITS for Mobile Website](https://www.ydits.net/apps/mobile/)
 
@@ -42,11 +42,11 @@ Developing.
 
 ## Services by YDITS
 
-- YDITS API
+- YDITS™ API
 
-### YDITS API
+### YDITS API™
 
-**YDITS API** is an API for developers to quickly distribute disaster prevention information by YDITS.
+**YDITS™ API** is an API for developers to quickly distribute disaster prevention information by YDITS.
 
 Developing.
 
@@ -62,6 +62,8 @@ Developing.
 
 ## Sitemap
 
+Sitemap of `www.ydits.net`:
+
 - [Home](https://www.ydits.net/)
 - [YDITS API](https://www.ydits.net/api/)
 - [YDITS API - 緊急地震速報（警報）／VXSE43](https://www.ydits.net/api/vxse43/)
@@ -74,3 +76,34 @@ Developing.
 - [YDITS for Web - Version History](https://www.ydits.net/apps/web/versions/)
 - [YDITS for Desktop](https://www.ydits.net/apps/desktop/)
 - [YDITS for Mobile](https://www.ydits.net/apps/mobile/)
+
+> Source: [Hosts](https://www.ydits.net/sitemap/)
+
+## Hosts
+
+List of `ydits.net` hosts (subdomains):
+
+- [www.ydits.net](https://www.ydits.net/)
+- [policies.ydits.net](https://policies.ydits.net/)
+- [webapp.ydits.net](https://webapp.ydits.net/)
+- [accounts.ydits.net](https://accounts.ydits.net/)
+- [api.ydits.net](https://api.ydits.net/)
+- [api2.ydits.net](https://api2.ydits.net/)
+- [api3.ydits.net](https://api3.ydits.net/)
+- [nes-dev.ydits.net](https://nes-dev.ydits.net/)
+- [cdn.ydits.net](https://cdn.ydits.net/)
+- [go.ydits.net](https://go.ydits.net/)
+- [dl.ydits.net](https://dl.ydits.net/)
+
+> Source: [Hosts](https://www.ydits.net/hosts/)
+
+## Contacts
+
+- [Contact Form](https://www.yoneyo.com/#contact)
+- [Contact Form Privacy Policy](https://www.yoneyo.com/contact-policy/)
+
+## Copyright
+
+- All original content (text, images, musics, code, etc.) on `ydits.net` and its subdomains are copyrighted by よね/Yone, unless otherwise noted.
+- YDITS™ is a trademark owned by よね/Yone.
+- Copyright © よね/Yone. All Rights Reserved.
