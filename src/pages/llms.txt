@@ -44,7 +44,7 @@ Developing.
 
 - YDITS™ API
 
-### YDITS API™
+### YDITS™ API
 
 **YDITS™ API** is an API for developers to quickly distribute disaster prevention information by YDITS.
 
