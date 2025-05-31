@@ -1,6 +1,9 @@
+/sitemap.xml /sitemap-index.xml 301
+
 /web/ /apps/web/ 301
 /en-us/web/ /en-us/apps/web/ 301
 /ko-kr/web/ /ko-kr/apps/web/ 301
 /zh-cn/web/ /zh-cn/apps/web/ 301
 /zh-tw/web/ /zh-tw/apps/web/ 301
+
 /api/eew/ /api/ 301

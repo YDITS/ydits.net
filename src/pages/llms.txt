@@ -1,0 +1,76 @@
+# YDITS Website
+
+> [YDITS website](https://www.ydits.net/) is the YDITS official website.
+
+## About YDITS
+
+YDITS is the service that quickly provides users with optimal disaster prevention information.
+
+### Operator of YDITS
+
+YDITS's operator is "よね/Yone".
+
+- [よね/Yone's Website](https://www.yoneyo.com/)
+- [よね/Yone's Website LLMs.txt](https://www.yoneyo.com/llms.txt)
+
+### YDITS's Works
+
+Application development, Disaster prevention services.
+
+## Applications by YDITS
+
+- YDITS for Web
+- YDITS for Desktop
+- YDITS for Mobile
+
+### YDITS for Web
+
+- [YDITS for Web Website](https://www.ydits.net/apps/web/)
+- [YDITS for Web Application](https://webapp.ydits.net/)
+
+### YDITS for Desktop
+
+- [YDITS for Desktop Website](https://www.ydits.net/apps/desktop/)
+
+Developing.
+
+### YDITS for Mobile
+
+- [YDITS for Mobile Website](https://www.ydits.net/apps/mobile/)
+
+Developing.
+
+## Services by YDITS
+
+- YDITS API
+
+### YDITS API
+
+**YDITS API** is an API for developers to quickly distribute disaster prevention information by YDITS.
+
+Developing.
+
+- [YDITS API Documents](https://www.ydits.net/api/)
+
+## Recent News
+
+- May 3, 2025: [YDITS for Web 緊急地震速報 取得先変更のお知らせ](https://www.ydits.net/news/2025/05/0301/)
+- Aug 31, 2024: [YDITS for Web は Apache 2.0 ライセンスになりました](https://www.ydits.net/news/2024/08/3101/)
+- Jul 31, 2023: [YDITS利用規約 改訂のお知らせ](https://www.ydits.net/news/2023/07/1701/)
+
+[More news >](https://www.ydits.net/news/)
+
+## Sitemap
+
+- [Home](https://www.ydits.net/)
+- [YDITS API](https://www.ydits.net/api/)
+- [YDITS API - 緊急地震速報（警報）／VXSE43](https://www.ydits.net/api/vxse43/)
+- [YDITS震度配色](https://www.ydits.net/color-scheme/)
+- [Project DM-D.S.S](https://www.ydits.net/docs/dmdata/):
+    - Note: “Project DM-D.S.S.” is a service operated by a completely different person (It is not a service operated by YDITS.).
+    - [Project DM-D.S.S Official Website](https://dmdata.jp/)
+- [News](https://www.ydits.net/news/)
+- [YDITS for Web](https://www.ydits.net/apps/web/)
+- [YDITS for Web - Version History](https://www.ydits.net/apps/web/versions/)
+- [YDITS for Desktop](https://www.ydits.net/apps/desktop/)
+- [YDITS for Mobile](https://www.ydits.net/apps/mobile/)
