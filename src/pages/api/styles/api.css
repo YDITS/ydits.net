@@ -114,6 +114,13 @@ a {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.api-links h2 {
+    font-size: 1.2rem;
 }
 
 .api-links h3 {

@@ -95,17 +95,13 @@
         </section>
 
         <section id="apiLinks" class="api-links">
-            <section class="section notice">
-                <p>
-                    2025/5/6: エンドポイントが変更されました。(/eew.json → /vxse43)<br>また、サーバー１を現在停止中です。
-                </p>
-            </section>
-
             <ul>
+                <h2>エンドポイントURL</h2>
+
                 <li>
                     <h3>
                         <span style="text-decoration: line-through;">
-                            本番 - サーバー１
+                            本番 - サーバー１ - HTTPS
                         </span>
                         ※現在停止中
                     </h3>
@@ -118,6 +114,16 @@
                 </li>
 
                 <li>
+                    <h3>
+                        <span style="text-decoration: line-through;">
+                            本番 - サーバー３ - HTTPS
+                        </span>
+                        ※現在未稼働
+                    </h3>
+                    <div class="endpoint">https://api3.ydits.net/vxse43</div>
+                </li>
+
+                <li>
                     <h3>テスト電文</h3>
                     <div class="endpoint">https://api2.ydits.net/test/vxse43</div>
                 </li>
@@ -127,14 +133,11 @@
         <div style="display: flex; flex-direction: column; gap: .5rem;">
             <section class="section notice">
                 <p>
-                    このAPIは現在開発段階です。いくつかのプロパティが不足しています。<br>
-                    また予告なくスキーマ (キー/出現条件/データ型) が変更される可能性があります。
-                </p>
-            </section>
-
-            <section class="section notice">
-                <p>
-                    サーバー１を優先して取得してください。サーバー１が利用できない間はサーバー２を取得するような処理をお願いします。<br>
+                    <span style="text-decoration: line-through;">
+                        サーバー１を優先して取得してください。サーバー１が利用できない間はサーバー２、サーバー２が利用できない間はサーバー３を取得するような処理をお願いします。
+                    </span>
+                    <br>
+                    現在サーバー１を停止しているため、サーバー２をご利用ください。
                 </p>
             </section>
 
@@ -234,7 +237,7 @@
                             <td>常に出現</td>
                             <td>string (内部処理はDate)</td>
                             <td>
-                                発表時刻<br>
+                                電文の発表時刻 (JST)<br>
                                 形式は <code>1970-01-01T12:00:00.000Z</code>
                             </td>
                         </tr>
@@ -305,7 +308,7 @@
                             <td>常に出現</td>
                             <td>string</td>
                             <td>
-                                地震が発生した時刻<br>
+                                地震が発生した時刻 (JST)<br>
                                 形式は <code>1970-01-01T12:00:00.000Z</code><br>
                                 秒値まで有効
                             </td>
@@ -315,7 +318,7 @@
                             <td>常に出現</td>
                             <td>string</td>
                             <td>
-                                観測点で地震を検知した時刻（発現時刻）<br>
+                                観測点で地震を検知した時刻（発現時刻|JST）<br>
                                 形式は <code>1970-01-01T12:00:00.000Z</code><br>
                                 秒値まで有効
                             </td>
