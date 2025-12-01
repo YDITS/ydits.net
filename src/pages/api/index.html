@@ -167,18 +167,117 @@
             <img style="width: 100%; max-width: 769px; text-align: center;"
                 src="https://cdn.ydits.net/images/ydits_api/ydits_api_routing_map_v2.svg"
                 alt="YDITS API rooting map image." srcset="">
+        </section>
 
-            <p style="
-                width: fit-content;
-                margin: 0 auto;
-                border: 1px solid #0003;
-                padding: 1rem;
-                text-align: left;
-                line-height: 1.5rem;">
-                サーバー１: 自宅サーバー (ASP.NET Core / C#)<br>
-                サーバー２: Cloudflare Workers (TypeScript)<br>
-                サーバー３: 自宅サーバー (Node.js / TypeScript)<br>
-            </p>
+        <section class="section source">
+            <h2 class="section__title source__section-title">情報元</h2>
+
+            <div class="section__body source__section-body">
+                <ul class="list source__list">
+                    <li class="list__item source__item">
+                        <h3 class="list__item-label source__item-label">
+                            <a href="https://dmdata.jp/">
+                                Project DM-D.S.S
+                            </a>
+                        </h3>
+
+                        <div class="list__item-content source__item-content">
+                            <ul class="list data__list">
+                                <li class="list__item data__item">
+                                    <p>
+                                        緊急地震速報（警報）(VXSE43)
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="list__item source__item">
+                        <h3 class="list__item-label source__item-label">
+                            <a href="https://xml.kishou.go.jp/">
+                                気象庁 防災情報XMLフォーマット電文（PULL型）
+                            </a>
+                        </h3>
+
+                        <div class="list__item-content source__item-content">
+                            <ul class="list data__list">
+                                <li class="list__item data__item">
+                                    <p>
+                                        震度速報 (VXSE51)
+                                    </p>
+                                </li>
+
+                                <li class="list__item data__item">
+                                    <p>
+                                        震源に関する情報 (VXSE52)
+                                    </p>
+                                </li>
+                                <li class="list__item data__item">
+                                    <p>
+                                        震源・震度に関する情報 (VXSE53)
+                                    </p>
+                                </li>
+                                <li class="list__item data__item">
+                                    <p>
+                                        顕著な地震の震源要素更新のお知らせ (VXSE61)
+                                    </p>
+                                </li>
+                                <li class="list__item data__item">
+                                    <p>
+                                        長周期地震動に関する観測情報 (VXSE62)
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section source">
+            <h2 class="section__title">技術スタック</h2>
+
+            <div class="section__body">
+                <ul class="list">
+                    <li class="list__item">
+                        <p>
+                            ASP.NET Core / C#
+                        </p>
+                    </li>
+
+                    <li class="list__item">
+                        <p>
+                            Node.js / TypeScript
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section source">
+            <h2 class="section__title">サーバー構成</h2>
+
+            <div class="section__body">
+                <ul class="list">
+                    <li class="list__item">
+                        <p>
+                            api.ydits.net : 自宅サーバー
+                        </p>
+                    </li>
+
+                    <li class="list__item">
+                        <p>
+                            api2.ydits.net: Cloudflare Workers
+                        </p>
+                    </li>
+
+                    <li class="list__item">
+                        <p>
+                            api3.ydits.net: 自宅サーバー
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
