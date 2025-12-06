@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* 
+
+    YDITS Site
+
+    Copyright (C) よね/Yone
+
+    No modification or reproduction of any kind is permitted.
+    改変や複製を一切禁じます。
+
+*/
+
+/* section */
+
+.section__title {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+
+    &::before {
+        display: block;
+        width: 4px;
+        height: auto;
+        border-radius: 2px;
+        background-color: #333;
+        content: "";
+    }
+}
+
+/* color-scheme-page */
+
+.color-scheme-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-scheme-page__main {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 1024px;
+    padding: 4rem 1rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.color-scheme-page__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* color-codes */
+
+.color-codes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 1rem;
+}
+
+.color-codes__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    list-style: none;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.color-codes__item {
+    display: flex;
+    flex-direction: column;
+    background-color: #0002;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.color-codes__title {
+    font-size: 1.2rem;
+}
+
+.color-codes__row {
+    background-color: #555;
+    color: #fff;
+
+    &:nth-of-type(odd) {
+        background-color: #222;
+    }
+
+    &>* {
+        padding: 0.5em;
+    }
+}
+
+/* color-scheme-sample */
+
+.color-scheme-sample__image {
+    width: 100%;
+}
