@@ -15,9 +15,11 @@
     <meta charset="UTF-8">
 
     <!-- Meta -->
-    <title>YDITSカラースキーム - YDITS公式サイト</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YDITSカラースキーム (震度配色) - YDITS公式サイト</title>
+    <meta name="description" content="YDITS が使用するカラースキーム (震度配色) です。">
     <meta name="keywords" content="YDITS">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
 
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/color-scheme/">
@@ -30,26 +32,28 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@yone1130_">
 
-    <!-- Fonts -->
+    <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="/Styles/main.css">
-    <link rel="stylesheet" href="/Styles/ui.css">
-    <link rel="stylesheet" href="/color-scheme/Styles/index.css">
 
     <!-- Icons -->
     <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="/Styles/main.css">
+    <link rel="stylesheet" href="/Styles/ui.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
     <!-- Scripts -->
     <script src="/Scripts/jquery-3.6.0.min.js"></script>
-    <script src="/Scripts/common.js"></script>
+    <script src="/scripts/common.js"></script>
     <noscript>
         <meta http-equiv="refresh" content="0; URL=/noscript/">
     </noscript>
@@ -73,37 +77,457 @@
 <body>
     <header></header>
 
-    <main>
-        <section id="main">
-            <h1 id="title">YDITSカラースキーム</h1>
+    <main class="color-scheme-page">
+        <section id="main" class="color-scheme-page__main">
+            <h1 id="pageTitle" class="page-title color-scheme-page__title">
+                YDITSカラースキーム (震度配色)
+            </h1>
 
-            <section id="content">
-                <p class="text">
-                    YDITSでは独自の配色を使用しています。
+            <section id="colorSchemePageDescription" class="section color-scheme-page__description">
+                <p class="color-scheme-page__description__text">
+                    YDITSでは独自のカラースキーム (震度配色)を使用しています。
                 </p>
-                <h2>カラーコード</h2>
-                <span id="g">[震度〇：背景色 / 文字色]</span>
+            </section>
 
-                <ol>
-                    <li>震度不明： #8080C0 / #FFFFFF</li>
-                    <li>震度０　： #8080C0 / #FFFFFF</li>
-                    <li>震度１　： #C0C0C0 / #010101</li>
-                    <li>震度２　： #4040C0 / #FFFFFF</li>
-                    <li>震度３　： #40C040 / #FFFFFF</li>
-                    <li>震度４　： #C0C040 / #010101</li>
-                    <li>震度５弱： #C0A040 / #FFFFFF</li>
-                    <li>震度５強： #C08040 / #FFFFFF</li>
-                    <li>震度６弱： #C04040 / #FFFFFF</li>
-                    <li>震度６強： #A04040 / #FFFFFF</li>
-                    <li>震度７　： #804080 / #FFFFFF</li>
+            <section id="colorCodes" class="section color-codes">
+                <h2 id="colorCodesTitle" class="section__title color-codes__title">
+                    カラーコード
+                </h2>
+
+                <ol id="colorCodesList" class="color-codes__list">
+                    <li class="color-codes__item"
+                        style="background-color: rgb(128, 128, 192); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度不明
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #8080C0
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(128, 128, 192)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item"
+                        style="background-color: rgb(128, 128, 192); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度０
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #8080C0
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(128, 128, 192)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item" style="background-color: rgb(192, 192, 192); color: rgb(1, 1, 1)">
+                        <h3 class="color-codes__title">
+                            震度１
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #C0C0C0
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(192, 192, 192)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #010101
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(1, 1, 1)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item" style="background-color: rgb(64, 64, 192); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度２
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #4040C0
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(64, 64, 192)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item" style="background-color: rgb(64, 192, 64); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度３
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #40C040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(64, 192, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item"
+                        style="background-color: rgb(192, 192, 64); color:rgb(1, 1, 1);">
+                        <h3 class="color-codes__title">
+                            震度４
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #C0C040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(192, 192, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #010101
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(1, 1, 1)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item"
+                        style="background-color: rgb(192, 160, 64); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度５弱
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #C0A040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(192, 160, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item"
+                        style="background-color: rgb(192, 128, 64); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度５強
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #C08040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(192, 128, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item" style="background-color: rgb(192, 64, 64); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度６弱
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #C04040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(192, 64, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item" style="background-color: rgb(160, 64, 64); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度６強
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #A04040
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(160, 64, 64)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+
+                    <li class="color-codes__item"
+                        style="background-color: rgb(128, 64, 128); color:rgb(255, 255, 255);">
+                        <h3 class="color-codes__title">
+                            震度７
+                        </h3>
+
+                        <table class="color-codes__table">
+                            <tbody class="color-codes__tbody">
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        背景色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #804080
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(128, 64, 128)
+                                    </td>
+                                </tr>
+
+                                <tr class="color-codes__row">
+                                    <th class="color-codes__header">
+                                        文字色
+                                    </th>
+
+                                    <td class="color-codes__data">
+                                        #FFFFFF
+                                    </td>
+
+                                    <td class="color-codes__data">
+                                        RGB(255, 255, 255)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
                 </ol>
 
-                <!-- <span id="icon">アイコン画像もあります。<a
-                        href="https://drive.google.com/drive/folders/1-0IjVvwim2VwlMIq2p7-MB4zrf0wVpCN?usp=sharing"
-                        target="_blank">ダウンロードはこちらから</a></span> -->
+            </section>
 
-                <label id="exp">参考：<img src="./Images/YDITS-colorScheme.png" alt="YDITS color scheme image"
-                        id="expImg"></label>
+            <section class="section color-scheme-sample">
+                <p>
+                    参考:
+                </p>
+                <img src="./images/ydits_color_scheme.png" alt="YDITS color scheme sample image"
+                    id="colorSchemeSampleImage" class="color-scheme-sample__image">
             </section>
         </section>
 
