@@ -1,10 +1,9 @@
-/*
- * common.js | YDITS Site
+/*!
  *
- * (c) よね/Yone
+ * YDITS Website
  *
- * No modification or reproduction of any kind is permitted.
- * 改変や複製を一切禁じます。
+ * Copyright (C) よね/Yone
+ *
  */
 
 $(() => {

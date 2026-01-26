@@ -1,13 +1,10 @@
 @charset "UTF-8";
 
-/*
+/*!
 
     YDITS Site
 
     Copyright (C) よね/Yone
-
-    No modification or reproduction of any kind is permitted.
-    改変や複製を一切禁じます。
 
 */
 
@@ -37,7 +34,7 @@ main {
     align-items: stretch;
 
     gap: 0.5em;
-    
+
     font-size: 2rem;
     padding-bottom: 1rem;
 
@@ -253,7 +250,7 @@ a {
     }
 }
 
-.source__item a  {
+.source__item a {
     font-size: 1.2rem;
 }
 
