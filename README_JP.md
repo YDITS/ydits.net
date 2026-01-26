@@ -1,19 +1,19 @@
 # YDITS Website
 
-[English →](./README.md)
+[Read in English >](./README.md)
 
 ## 概要
 
 YDITSのウェブサイトです。
 
+https://www.ydits.net/ で公開しています。
+
 ## 利用方法
 
 `src/pages/` ディレクトリをデプロイします。
 
-https://www.ydits.net/ で公開しています。
-
 ## ライセンス
 
-ライセンスなし。
+このプロジェクトはライセンスされません。
 
-Copyright &copy; よね/Yone
+Copyright © よね/Yone

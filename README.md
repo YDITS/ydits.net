@@ -1,19 +1,19 @@
 # YDITS Website
 
-[日本語 →](./README_JP.md)
+[日本語で読む >](./README_JP.md)
 
 ## Overview
 
 YDITS website.
 
+Published at https://www.ydits.net/ .
+
 ## Usage
 
 Deploy directory `src/pages/`.
 
-Published at https://www.ydits.net/ .
-
 ## License
 
-No licensed.
+This project is not licensed.
 
-Copyright &copy; よね/Yone
+Copyright © よね/Yone
