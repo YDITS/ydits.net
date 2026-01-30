@@ -88,10 +88,10 @@ function loadCommonElements() {
 
 function header() {
     return (`<div class="header__content">
-    <h2 class="header-logo" href="/">
+    <a class="header-logo" href="/">
         <img class="header-logo__img" src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png"
             alt="YDITSのロゴ">
-    </h2>
+    </a>
 
     <div id="headerMenuButton" class="header-menu-button">
         <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">menu</span>
