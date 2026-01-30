@@ -4,7 +4,7 @@
 
 ## Overview
 
-YDITS website.
+The YDITS website.
 
 Published at https://www.ydits.net/ .
 
