@@ -1,4 +1,11 @@
 /sitemap.xml /sitemap-index.xml 308
+/news/sitemap-news.xml /sitemap-news.xml 308
+
+/styles/main.css /styles/common.css 308
+/Styles/main.css /styles/common.css 308
+
+/Styles/* /styles/:splat 308
+/Scripts/* /scripts/:splat 308
 
 /web/ /apps/web/ 308
 /en-us/web/ /en-us/apps/web/ 308

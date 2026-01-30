@@ -12,26 +12,35 @@
     <meta charset="UTF-8">
 
     <!-- Meta -->
-    <title>バージョン履歴 | YDITS for Web - YDITS公式サイト</title>
+    <title>バージョン履歴 - YDITS for Web | YDITS公式サイト</title>
     <meta name="description" content="YDITS for Web のバージョン履歴です。">
-    <meta name="keywords" content="YDITS, YDITS for Web">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light">
+    <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.ydits.net/apps/web/versions/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YDITS公式サイト">
+    <meta property="og:title" content="バージョン履歴 - YDITS for Web">
+    <meta property="og:description" content="YDITS for Web のバージョン履歴です。">
+    <meta property="og:image" content="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YDITS_JP">
+
+    <!-- Alternates -->
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/apps/web/versions/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/apps/web/versions/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/apps/web/versions/">
     <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/apps/web/versions/">
     <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/apps/web/versions/">
 
-    <!-- OGP -->
-    <meta property="og:url" content="https://www.ydits.net/news/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="YDITS公式サイト">
-    <meta property="og:title" content="YDITS for Web">
-    <meta property="og:description" content="YDITS for Web のバージョン履歴です。">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YDITS_JP">
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Icons -->
     <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
@@ -39,21 +48,19 @@
     <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/sytles/local-noto-sans-jp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=close,double_arrow,expand_more,menu&display=block">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/Styles/main.css">
-    <link rel="stylesheet" href="/Styles/ui.css">
-    <link rel="stylesheet" href="/apps/web/Styles/index.css">
-    <link rel="stylesheet" href="/apps/web/versions/Styles/index.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/ui.css">
+    <link rel="stylesheet" href="/apps/web/styles/index.css">
+    <link rel="stylesheet" href="/apps/web/versions/styles/index.css">
 
     <!-- Scripts -->
-    <script src="/Scripts/jquery-3.6.0.min.js"></script>
-    <script src="/Scripts/common.js"></script>
+    <script src="/scripts/common.js" type="module"></script>
     <noscript>
         <meta http-equiv="refresh" content="0; URL=/noscript/">
     </noscript>
@@ -90,9 +97,9 @@
 
                 <ul class="versions__index__ul">
                     <li class="versions__index__li">
-                        <a href="/apps/web/versions/#version3" class="versions__index__link">↓ Ver 3</a>
-                        <a href="/apps/web/versions/#version2" class="versions__index__link">↓ Ver 2</a>
-                        <a href="/apps/web/versions/#version1" class="versions__index__link">↓ Ver 1</a>
+                        <a href="#version3" class="versions__index__link">↓ Ver 3</a>
+                        <a href="#version2" class="versions__index__link">↓ Ver 2</a>
+                        <a href="#version1" class="versions__index__link">↓ Ver 1</a>
                     </li>
                 </ul>
             </div>
@@ -440,6 +447,18 @@
                     </ul>
                 </li>
 
+                <!-- Google AdSense -->
+                <section class="adsense">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4842259448644646"
+                        data-ad-slot="6212268717" data-ad-format="auto" data-full-width-responsive="true">
+                    </ins>
+
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </section>
+                <!-- /Google AdSense -->
+
                 <li class="versions__li version">
                     <h2 class="version__title">Ver 2.12.0</h2>
 
@@ -654,6 +673,18 @@
                         </li>
                     </ul>
                 </li>
+
+                <!-- Google AdSense -->
+                <section class="adsense">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4842259448644646"
+                        data-ad-slot="6212268717" data-ad-format="auto" data-full-width-responsive="true">
+                    </ins>
+
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </section>
+                <!-- /Google AdSense -->
 
                 <li class="versions__li version">
                     <h2 class="version__title">Ver 1.7.1</h2>
