@@ -16,6 +16,19 @@ const pageLangages = [
     "zh-tw",
 ];
 
+const i18n = {
+    "ja-jp": {
+        "logoImgAlt": "YDITSのロゴ",
+        "home": "ホーム",
+        "contact": "お問い合わせ",
+    },
+    "en-us": {
+        "logoImgAlt": "YDITS's logo",
+        "home": "Home",
+        "contact": "Contact Me",
+    }
+}
+
 let headerMenuButton;
 let headerMenu;
 
@@ -67,14 +80,29 @@ function alertOrigin() {
 }
 
 function initializeCommonElements() {
-    loadCommonElements();
+    const pageLanguage = getPageLanguage();
+    loadCommonElements({ language: pageLanguage });
     initializeHeaderMenuEventHandler();
     initializeLanguageSelectorEventHandler();
 }
 
-function loadCommonElements() {
-    document.querySelector("header").innerHTML = header();
-    document.querySelector("footer").innerHTML = footer();
+function getPageLanguage() {
+    const pathname = window.location.pathname;
+    const pathArray = pathname.split("/");
+
+    if (pageLangages.includes(pathArray[1])) {
+        return pathArray[1];
+    } else {
+        return "ja-jp";
+    }
+}
+
+function loadCommonElements({ language }) {
+    const _headerProps = i18n[language];
+    const _footerProps = i18n[language];
+
+    document.querySelector("header").innerHTML = header(_headerProps);
+    document.querySelector("footer").innerHTML = footer(_footerProps);
     const trying = () => {
         try {
             headerMenuButton = document.getElementById("headerMenuButton");
@@ -86,11 +114,11 @@ function loadCommonElements() {
     trying();
 }
 
-function header() {
+function header(props) {
     return (`<div class="header__content">
     <a class="header-logo" href="/">
         <img class="header-logo__img" src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png"
-            alt="YDITSのロゴ">
+            alt="${props.logoImgAlt}">
     </a>
 
     <div id="headerMenuButton" class="header-menu-button">
@@ -100,14 +128,14 @@ function header() {
 
     <nav id="headerMenu" class="header-menu">
         <ul>
-            <li><a href="/">ホーム</a></li>
-            <li><a href="https://www.yoneyo.com/#contact">お問い合わせ</a></li>
+            <li><a href="/">${props.home}</a></li>
+            <li><a href="https://www.yoneyo.com/#contact">${props.contact}</a></li>
         </ul>
     </nav>
 </div>`);
 }
 
-function footer() {
+function footer(props) {
     return (`<div class="footer__content">
     <div id="lang" class="footer__language-selector">
         <span class="material-symbols-outlined footer__language-selector__open">
