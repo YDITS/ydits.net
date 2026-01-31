@@ -11,45 +11,64 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
 
+    <!-- Meta -->
     <title>YDITS for Web | YDITS Site</title>
     <meta name="description"
         content="'YDITS for Web' is a website that allows users to check disaster information on your WebBrowser.">
-    <meta name="keywords" content="YDITS, YDITS for Web">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light">
 
-    <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/apps/web/">
-    <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/apps/web/">
-    <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/apps/web/">
-    <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/apps/web/">
-    <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/apps/web/">
-
+    <!-- OGP -->
     <meta property="og:url" content="https://www.ydits.net/apps/web/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="YDITS Site">
     <meta property="og:title" content="YDITS for Web">
     <meta property="og:description"
         content="'YDITS for Web' is a website that allows users to check disaster information on your WebBrowser.">
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@YDITS_JP">
 
+    <!-- Alternates -->
+    <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/apps/web/">
+    <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/apps/web/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/apps/web/">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/apps/web/">
+    <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/apps/web/">
+
+    <!-- Base -->
     <base href="https://www.ydits.net/">
 
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/sytles/local-noto-sans-jp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=close,double_arrow,expand_more,language,menu&display=block">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/ui.css">
     <link rel="stylesheet" href="./apps/web/styles/index.css">
 
+    <!-- Scripts -->
+    <script src="./scripts/common.js" type="module"></script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL=./noscript/">
+    </noscript>
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -58,12 +77,6 @@
 
         gtag('config', 'G-DFN4DKGM3F');
     </script>
-
-    <script src="./scripts/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/common.js" type="module"></script>
-    <noscript>
-        <meta http-equiv="refresh" content="0; URL=./noscript/">
-    </noscript>
 </head>
 
 <body>
@@ -123,7 +136,7 @@
                 <div class="section-content link">
                     <a class="link-button" href="https://webapp.ydits.net/">
                         <div class="wrapper">
-                            Let's use YDITS for Web
+                            Open YDITS for Web
                             <span class="material-symbols-outlined">
                                 double_arrow
                             </span>
@@ -138,7 +151,7 @@
                 <div class="section-content link">
                     <a class="link-button" href="./en-us/apps/web/versions/">
                         <div class="wrapper">
-                            Open version history
+                            Version history
                             <span class="material-symbols-outlined">
                                 double_arrow
                             </span>
