@@ -13,14 +13,15 @@
     --font-size: 14px;
     --body-background-color: #fff;
     --font-weight: 400;
-    --font-family: 'Noto Sans JP', sans-serif;
+    --font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
     --color: #222;
 
     --origin-alert-height: 4rem;
 
     /* z-index */
-    --header-menu-button--z-index: 10;
-    --origin-alert--z-index: 20;
+    --header--z-index: 10;
+    --header-menu-button--z-index: 20;
+    --origin-alert--z-index: 100;
 
     scroll-behavior: smooth;
     font-weight: var(--font-weight);
@@ -57,7 +58,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: var(--header--z-index);
 
     display: flex;
     flex-direction: column;
@@ -333,18 +334,51 @@ footer {
     justify-content: center;
     align-items: center;
 
+    padding: 0.5rem 1rem;
+    gap: 1rem;
     background-color: #222c;
     font-size: 1rem;
     color: #fff;
 }
 
 .origin-alert__close-button {
+    position: relative;
     border: none;
     border-radius: 100lvw;
 
     padding: 0.5rem;
     background-color: #eee;
     color: #222;
+
+    cursor: pointer;
+
+    &:hover {
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 100lvw;
+            background-color: #0001;
+            content: "";
+        }
+    }
+
+    &:active {
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 100lvw;
+            background-color: #0004;
+            content: "";
+        }
+    }
 }
 
 /* link-button */

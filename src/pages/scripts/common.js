@@ -57,13 +57,15 @@ function checkOrigin(hostname) {
 }
 
 function alertOrigin() {
-    const alertText = document.createElement("strong");
-    alertText.textContent = "\"ydits.net\" ではないドメインからアクセスされています。このサイトでは、プライバシー情報やパスワードを送信しないでください。"
+    const alertTextStrong = document.createElement("strong");
+    alertTextStrong.textContent = "\"ydits.net\" ではないドメインからアクセスされています。このサイトでは、プライバシー情報やパスワードを送信しないでください。"
+    const alertText = document.createElement("p");
     alertText.classList.add("origin-alert__text");
+    alertText.appendChild(alertTextStrong);
 
     const closeButton = document.createElement("button");
-    closeButton.textContent = "今後表示しない";
     closeButton.classList.add("origin-alert__close-button");
+    closeButton.textContent = "今後表示しない";
     closeButton.addEventListener("click", () => {
         alertElement.remove();
         document.body.style.paddingBottom = "0";
@@ -71,9 +73,9 @@ function alertOrigin() {
     });
 
     const alertElement = document.createElement("div");
+    alertElement.classList.add("origin-alert");
     alertElement.appendChild(alertText);
     alertElement.appendChild(closeButton);
-    alertElement.classList.add("origin-alert");
 
     document.body.prepend(alertElement);
     document.body.style.paddingBottom = "var(--origin-alert-height)";
@@ -100,7 +102,7 @@ function getPageLanguage() {
 function loadCommonElements({ language }) {
     const _headerProps = {
         i18n: i18n[language],
-        toppage: `/${language}/`,
+        toppage: language === "ja-jp" ? "/" : `/${language}/`,
     };
     const _footerProps = i18n[language];
 

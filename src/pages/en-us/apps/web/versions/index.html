@@ -11,59 +11,59 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
 
-    <!----- meta ----->
+    <!-- Meta -->
+    <title>Version History - YDITS for Web | YDITS Official Website</title>
+    <meta name="description" content="YDITS for Web version history.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YDITS for Web の公式ページです。">
-    <meta name="keywords" content="YDITS">
-    <meta name="author" content="よね/Yone">
-    <meta name="generator" content="Microsoft Visual Studio Code">
-    <title>バージョン履歴 - YDITS for Web - YDITS公式サイト</title>
+    <meta name="color-scheme" content="light">
 
-    <meta name="color-scheme" content="dark">
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.ydits.net/en-us/apps/web/versions/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YDITS Official Website">
+    <meta property="og:title" content="Version History - YDITS for Web">
+    <meta property="og:description" content="YDITS for Web version history.">
 
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YDITS_EN">
+
+    <!-- Alternates -->
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/web/versions/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/web/versions/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/web/versions/">
     <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/web/versions/">
     <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/web/versions/">
 
-    <!--- OGP --->
-    <meta property="og:url" content="https://www.ydits.net/news/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="YDITS公式サイト">
-    <meta property="og:title" content="YDITS for Web - YDITS公式サイト">
-    <meta property="og:description" content="YDITS for Web の公式ページです。">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@yone1130_">
-
-    <!--- Windows --->
-    <meta name="application-name" content="YDITS for Web">
-
-    <!----- Links ----->
-    <base href="https://www.ydits.net/">
-
-    <!--- Styles --->
-    <!-- Fonts -->
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
 
-    <!-- Material Symbols -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-
-    <!-- main -->
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/ui.css">
-    <link rel="stylesheet" href="./web/styles/index.css">
-    <link rel="stylesheet" href="./web/versions/styles/index.css">
-
-    <!--- icon --->
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
-    <!----- Scripts ----->
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&icon_names=close,double_arrow,expand_more,language,menu&display=block">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/ui.css">
+    <link rel="stylesheet" href="/apps/web/styles/index.css">
+    <link rel="stylesheet" href="/apps/web/versions/styles/index.css">
+
+    <!-- Scripts -->
+    <script src="/scripts/common.js" type="module"></script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL=/en-us/noscript/">
+    </noscript>
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -72,13 +72,6 @@
 
         gtag('config', 'G-DFN4DKGM3F');
     </script>
-
-    <script src="./scripts/jquery-3.6.0.min.js"></script>
-    <script src="./scripts/common.js" type="module"></script>
-
-    <noscript>
-        <meta http-equiv="refresh" content="0; URL=./noscript/">
-    </noscript>
 </head>
 
 <body>
@@ -86,515 +79,775 @@
 
     <main>
         <section id="hero">
-            <div class="title">YDITS for Web<br>バージョン履歴</div>
+            <div class="title">
+                YDITS for Web<br />
+                Version History
+            </div>
         </section>
 
-        <section id="main">
-            <li class="versions__li version">
-                <h2 class="version__title">Ver 3.16.1</h2>
+        <section id="main" class="versions">
+            <div class="versions__index">
+                <h2 class="versions__index__title">Major versions</h2>
 
-                <ul class="version__content">
-                    <li class="version__content__list">
-                        ウィンドウサイズの変更時にポップアップが見えてしまう問題を改善しました。
+                <ul class="versions__index__ul">
+                    <li class="versions__index__li">
+                        <a href="#version3" class="versions__index__link">↓ Ver 3</a>
+                        <a href="#version2" class="versions__index__link">↓ Ver 2</a>
+                        <a href="#version1" class="versions__index__link">↓ Ver 1</a>
                     </li>
                 </ul>
-            </li>
-
-            <li class="versions__li version">
-                <h2 class="version__title">Ver 3.16.0</h2>
-
-                <ul class="version__content">
-                    <li class="version__content__list">
-                        FPSの表示更新頻度を設定から変更できるようになりました。
-                    </li>
-
-                    <li class="version__content__list">
-                        FPSの計算方法を変更し、より正確で安定した値が表示されるようになりました。
-                    </li>
-
-                    <li class="version__content__list">
-                        設定項目の「デバッグモード」の名称を「デバッグオプション」に変更しました。
-                    </li>
-                </ul>
-            </li>
-
-            <li class="versions__li version">
-                <h2 class="version__title">Ver 3.15.2</h2>
-
-                <ul class="version__content">
-                    <li class="version__content__list">
-                        ライセンス表記でのtarget="_blank"が指定されていない誤りを修正しました。
-                    </li>
-                </ul>
-            </li>
-
-            <li class="versions__li version">
-                <h2 class="version__title">Ver 3.15.1</h2>
-
-                <ul class="version__content">
-                    <li class="version__content__list">
-                        ライセンス表記の変更を行いました。
-                    </li>
-                </ul>
-            </li>
-
-            <section class="versions">
-                <h2>Ver 3.15.0</h2>
-                <ul>
-                    <li>Apache 2.0 ライセンスになりました。</li>
-                    <li>その他軽微な変更を行いました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.14.2</h2>
-                <ul>
-                    <li>NTP時刻が取得できない際に、時間が巻き戻ってしまう問題を修正しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.14.1</h2>
-                <ul>
-                    <li>UIの変更を行いました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.14.0</h2>
-                <ul>
-                    <li>複数の台風情報が発表されている場合に、すべての情報が表示されるようになりました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.13.1</h2>
-                <ul>
-                    <li>FPS表示を実装しました。</li>
-                    <li>台風情報が発表されていない場合に例外が発生する問題を修正しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.13.0</h2>
-                <ul>
-                    <li>雨雲レーダーを実装しました。</li>
-                    <li>台風予想進路図を実装しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.12.0</h2>
-                <ul>
-                    <li>マップ画像を変更しました。</li>
-                    <li>ブラウザの言語が日本語以外の場合に、現在地の地区予報区が取得できない問題を修正しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.11.2</h2>
-                <ul>
-                    <li>Android端末でプッシュ通知がされない問題を修正しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.11.1</h2>
-                <ul>
-                    <li>前回の緊急地震速報が、新しい緊急地震速報の受信時に表示されてしまう問題を修正しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.11.0</h2>
-                <ul>
-                    <li>P2P地震情報をWebSocket接続に変更しました。</li>
-                    <li>WebSocket接続により、地震情報の取得速度が大幅に向上しました。</li>
-                    <li>緊急地震速報（警報）の受信時に、対象地域が表示されるようにしました。</li>
-                    <li>現在地が警報対象地域の場合は、警報画面に現在地の推定震度と主要動到達予想時刻が表示されるようにしました。</li>
-                    <li>地震履歴の表示件数を増やしました。</li>
-                    <li>その他多くの変更と、修正、改善を行いました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.10.0</h2>
-                <ul>
-                    <li>同時複数の緊急地震速報に対応しました。</li>
-                    <li>警報音の鳴動を震度5弱以上に変更しました。</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.9.0</h2>
-                <ul>
-                    <li>メニュー項目の追加</li>
-                    <li>マップ移動時の挙動を修正</li>
-                    <li>その他いくつかの変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.8.0</h2>
-                <ul>
-                    <li>緊急地震速報受信時の、マップの自動移動をオフに設定できるように変更</li>
-                    <li>デバッグログの追加</li>
-                    <li>その他軽微な変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.7.0</h2>
-                <ul>
-                    <li>メニューのUIを大幅に変更</li>
-                    <li>その他軽微な修正と変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.6.1</h2>
-                <ul>
-                    <li>ヘルプページのデザインを改善</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.6.0</h2>
-                <ul>
-                    <li>設定メニューのUIを変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.5.0</h2>
-                <ul>
-                    <li>緊急地震速報未発表時は最新の地震情報をフィールドへ表示するように変更</li>
-                    <li>レイアウトの一部変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.4.0</h2>
-                <ul>
-                    <li>PWAを実装し、サイトのインストールを可能に</li>
-                    <li>Service Workerの仮実装</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.3.0</h2>
-                <ul>
-                    <li>Project DM-D.S.Sアカウントの連携機能を仮実装</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.2.0</h2>
-                <ul>
-                    <li>設定画面の構成および項目の変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.1.0</h2>
-                <ul>
-                    <li>ホームボタンの追加</li>
-                    <li>時計の追加</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.0.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 3.0.0</h2>
-                <ul>
-                    <li>UIの大幅な変更</li>
-                    <li>その他の修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.12.0</h2>
-                <ul>
-                    <li>地図画像を変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.11.0</h2>
-                <ul>
-                    <li>緊急地震速報の取得先を変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.10.2</h2>
-                <ul>
-                    <li>軽微な変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.10.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.10.0</h2>
-                <ul>
-                    <li>プッシュ通知に対応</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.9.0</h2>
-                <ul>
-                    <li>緊急地震速報の取得先をnarikakun.netに変更</li>
-                    <li>WebSocket通信により、緊急地震速報の受信速度向上</li>
-                    <li>深発、PLUM法による緊急地震速報に対応</li>
-                    <li>その他の修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.8.0</h2>
-                <ul>
-                    <li>強震モニタのブラウザ内全画面機能を追加</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.7.0</h2>
-                <ul>
-                    <li>音声を英語版に対応</li>
-                    <li>ヘルプページを変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.6.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.6.0</h2>
-                <ul>
-                    <li>強震モニタ画面で緊急地震速報の情報を確認できるように変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.5.0</h2>
-                <ul>
-                    <li>英語表記に対応</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.4.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.4.0</h2>
-                <ul>
-                    <li>緊急地震速報及び地震情報の受信時に，震度を読み上げるように変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.3.1</h2>
-                <ul>
-                    <li>メニュー画面の配置を一部変更</li>
-                    <li>ライセンス情報の記載を一部変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.3.0</h2>
-                <ul>
-                    <li>強震モニタ (予報円の描画) を追加</li>
-                    <li>緊急地震速報及び地震情報の受信時に音声を再生するように変更</li>
-                    <li>取消報を受信するように変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.2.0</h2>
-                <ul>
-                    <li>ソースコードの修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.1.0</h2>
-                <ul>
-                    <li>UIの変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.0.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 2.0.0</h2>
-                <ul>
-                    <li>UIの大幅な変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.7.1</h2>
-                <ul>
-                    <li>地震情報, 地震履歴 に震度配色を実装</li>
-                    <li>その他の修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.7.0</h2>
-                <ul>
-                    <li>地震履歴の機能を実装</li>
-                    <li>ヘルプページの内容を変更</li>
-                    <li>その他の修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.6.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.6.0</h2>
-                <ul>
-                    <li>ヘルプページを追加</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.5.2</h2>
-                <ul>
-                    <li>軽微な変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.5.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.5.0</h2>
-                <ul>
-                    <li>設定項目を追加</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.4.2</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.4.1</h2>
-                <ul>
-                    <li>軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.4.0</h2>
-                <ul>
-                    <li>デザインを大幅に変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.3.0</h2>
-                <ul>
-                    <li>ダークモードに対応</li>
-                    <li>設定内容を保存できるように変更</li>
-                    <li>地震情報の表示に誤りが発生する問題を修正</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.2.2</h2>
-                <ul>
-                    <li>効果音の再生の有無を設定できるように変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.2.1</h2>
-                <ul>
-                    <li>効果音が読み込まれない問題を修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.2.0</h2>
-                <ul>
-                    <li>緊急地震速報の受信時に震度別で色が表示されるように変更</li>
-                    <li>緊急地震速報の受信時にウィンドウを自動的に切り替えるように変更</li>
-                    <li>その他軽微な修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.1.1</h2>
-                <ul>
-                    <li>緊急地震速報の受信時に警報音が再生されるように変更</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.1.0</h2>
-                <ul>
-                    <li>緊急地震速報に対応</li>
-                    <li>重大な問題を修正</li>
-                </ul>
-            </section>
-
-            <section class="versions">
-                <h2>Ver 1.0.0</h2>
-                <ul>
-                    <li>初版</li>
-                </ul>
-            </section>
+            </div>
+
+            <ul class="versions__ul">
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.16.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ウィンドウサイズの変更時にポップアップが見えてしまう問題を改善しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.16.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            FPSの表示更新頻度を設定から変更できるようになりました。
+                        </li>
+
+                        <li class="version__content__list">
+                            FPSの計算方法を変更し、より正確で安定した値が表示されるようになりました。
+                        </li>
+
+                        <li class="version__content__list">
+                            設定項目の「デバッグモード」の名称を「デバッグオプション」に変更しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.15.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ライセンス表記でのtarget="_blank"が指定されていない誤りを修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.15.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ライセンス表記の変更を行いました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.15.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            Apache 2.0 ライセンスになりました。
+                        </li>
+
+                        <li class="version__content__list">
+                            その他軽微な変更を行いました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.14.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            NTP時刻が取得できない際に、時間が巻き戻ってしまう問題を修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.14.1</h2>
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            UIの変更を行いました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.14.0</h2>
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            複数の台風情報が発表されている場合に、すべての情報が表示されるようになりました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.13.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            FPS表示を実装しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            台風情報が発表されていない場合に例外が発生する問題を修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.13.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            雨雲レーダーを実装しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            台風予想進路図を実装しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.12.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            マップ画像を変更しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            ブラウザの言語が日本語以外の場合に、現在地の地区予報区が取得できない問題を修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.11.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            Android端末でプッシュ通知がされない問題を修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.11.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            前回の緊急地震速報が、新しい緊急地震速報の受信時に表示されてしまう問題を修正しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.11.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            P2P地震情報をWebSocket接続に変更しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            WebSocket接続により、地震情報の取得速度が大幅に向上しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            緊急地震速報（警報）の受信時に、対象地域が表示されるようにしました。
+                        </li>
+
+                        <li class="version__content__list">
+                            現在地が警報対象地域の場合は、警報画面に現在地の推定震度と主要動到達予想時刻が表示されるようにしました。
+                        </li>
+
+                        <li class="version__content__list">
+                            地震履歴の表示件数を増やしました。
+                        </li>
+
+                        <li class="version__content__list">
+                            その他多くの変更と、修正、改善を行いました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.10.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            同時複数の緊急地震速報に対応しました。
+                        </li>
+
+                        <li class="version__content__list">
+                            警報音の鳴動を震度5弱以上に変更しました。
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.9.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            メニュー項目の追加
+                        </li>
+
+                        <li class="version__content__list">
+                            マップ移動時の挙動を修正
+                        </li>
+
+                        <li class="version__content__list">
+                            その他いくつかの変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.8.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報受信時の、マップの自動移動をオフに設定できるように変更
+                        </li>
+                        <li class="version__content__list">
+                            デバッグログの追加
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.7.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            メニューのUIを大幅に変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正と変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.6.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ヘルプページのデザインを改善
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.6.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            設定メニューのUIを変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.5.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報未発表時は最新の地震情報をフィールドへ表示するように変更
+                        </li>
+                        <li class="version__content__list">
+                            レイアウトの一部変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.4.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            PWAを実装し、サイトのインストールを可能に
+                        </li>
+                        <li class="version__content__list">
+                            Service Workerの仮実装
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.3.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            Project DM-D.S.Sアカウントの連携機能を仮実装
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.2.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            設定画面の構成および項目の変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.1.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ホームボタンの追加
+                        </li>
+                        <li class="version__content__list">時計の追加</li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 3.0.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li id="version3" class="versions__li version">
+                    <h2 class="version__title">Ver 3.0.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            UIの大幅な変更
+                        </li>
+                        <li class="version__content__list">その他の修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.12.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            地図画像を変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.11.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報の取得先を変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.10.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な変更</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.10.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.10.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            プッシュ通知に対応
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.9.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報の取得先をnarikakun.netに変更
+                        </li>
+                        <li class="version__content__list">
+                            WebSocket通信により、緊急地震速報の受信速度向上
+                        </li>
+                        <li class="version__content__list">
+                            深発、PLUM法による緊急地震速報に対応
+                        </li>
+                        <li class="version__content__list">その他の修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.8.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            強震モニタのブラウザ内全画面機能を追加
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.7.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            音声を英語版に対応
+                        </li>
+                        <li class="version__content__list">
+                            ヘルプページを変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.6.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.6.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            強震モニタ画面で緊急地震速報の情報を確認できるように変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.5.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            英語表記に対応
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.4.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.4.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報及び地震情報の受信時に，震度を読み上げるように変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.3.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            メニュー画面の配置を一部変更
+                        </li>
+                        <li class="version__content__list">
+                            ライセンス情報の記載を一部変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.3.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            強震モニタ (予報円の描画) を追加
+                        </li>
+                        <li class="version__content__list">
+                            緊急地震速報及び地震情報の受信時に音声を再生するように変更
+                        </li>
+                        <li class="version__content__list">
+                            取消報を受信するように変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.2.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ソースコードの修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.1.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">UIの変更</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 2.0.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li id="version2" class="versions__li version">
+                    <h2 class="version__title">Ver 2.0.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            UIの大幅な変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.7.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            地震情報, 地震履歴 に震度配色を実装
+                        </li>
+                        <li class="version__content__list">その他の修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.7.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            地震履歴の機能を実装
+                        </li>
+                        <li class="version__content__list">
+                            ヘルプページの内容を変更
+                        </li>
+                        <li class="version__content__list">その他の修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.6.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.6.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ヘルプページを追加
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.5.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な変更</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.5.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.5.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            設定項目を追加
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.4.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.4.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">軽微な修正</li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.4.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            デザインを大幅に変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.3.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            ダークモードに対応
+                        </li>
+                        <li class="version__content__list">
+                            設定内容を保存できるように変更
+                        </li>
+                        <li class="version__content__list">
+                            地震情報の表示に誤りが発生する問題を修正
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.2.2</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            効果音の再生の有無を設定できるように変更
+                        </li>
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.2.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            効果音が読み込まれない問題を修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.2.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報の受信時に震度別で色が表示されるように変更
+                        </li>
+
+                        <li class="version__content__list">
+                            緊急地震速報の受信時にウィンドウを自動的に切り替えるように変更
+                        </li>
+
+                        <li class="version__content__list">
+                            その他軽微な修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.1.1</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報の受信時に警報音が再生されるように変更
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="versions__li version">
+                    <h2 class="version__title">Ver 1.1.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">
+                            緊急地震速報に対応
+                        </li>
+                        <li class="version__content__list">
+                            重大な問題を修正
+                        </li>
+                    </ul>
+                </li>
+
+                <li id="version1" class="versions__li version">
+                    <h2 class="version__title">Ver 1.0.0</h2>
+
+                    <ul class="version__content">
+                        <li class="version__content__list">初版</li>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </main>
 
