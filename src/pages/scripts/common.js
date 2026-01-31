@@ -98,7 +98,10 @@ function getPageLanguage() {
 }
 
 function loadCommonElements({ language }) {
-    const _headerProps = i18n[language];
+    const _headerProps = {
+        i18n: i18n[language],
+        toppage: `/${language}/`,
+    };
     const _footerProps = i18n[language];
 
     document.querySelector("header").innerHTML = header(_headerProps);
@@ -116,9 +119,9 @@ function loadCommonElements({ language }) {
 
 function header(props) {
     return (`<div class="header__content">
-    <a class="header-logo" href="/">
+    <a class="header-logo" href="${props.toppage}">
         <img class="header-logo__img" src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png"
-            alt="${props.logoImgAlt}">
+            alt="${props.i18n.logoImgAlt}">
     </a>
 
     <div id="headerMenuButton" class="header-menu-button">
@@ -128,8 +131,8 @@ function header(props) {
 
     <nav id="headerMenu" class="header-menu">
         <ul>
-            <li><a href="/">${props.home}</a></li>
-            <li><a href="https://www.yoneyo.com/#contact">${props.contact}</a></li>
+            <li><a href="${props.toppage}">${props.i18n.home}</a></li>
+            <li><a href="https://www.yoneyo.com/#contact">${props.i18n.contact}</a></li>
         </ul>
     </nav>
 </div>`);
