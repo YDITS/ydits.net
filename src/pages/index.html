@@ -22,9 +22,9 @@
     <meta property="og:url" content="https://www.ydits.net/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="YDITS公式サイト">
+    <meta property="og:image" content="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
     <meta property="og:title" content="YDITS公式サイト">
     <meta property="og:description" content="利用者に最適な防災情報を迅速に提供するサービス『YDITS』の公式サイトです。">
-    <meta property="og:image" content="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@YDITS_JP">
@@ -81,7 +81,28 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header__content">
+            <a class="header-logo" href="/">
+                <img class="header-logo__img"
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png" alt="YDITSのロゴ">
+            </a>
+
+            <div id="headerMenuButton" class="header-menu-button">
+                <span
+                    class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">menu</span>
+                <span
+                    class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--close">close</span>
+            </div>
+
+            <nav id="headerMenu" class="header-menu">
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="https://www.yoneyo.com/#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <article id="hero">
@@ -252,7 +273,35 @@
         </article>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer__content">
+            <div id="lang" class="footer__language-selector">
+                <span class="material-symbols-outlined footer__language-selector__open">
+                    language
+                </span>
+                <div class="pulldownMenu language-selector" id="langSelect">
+                    <div class="label">
+                        <span class="title">Language</span>
+                        <span class="material-symbols-outlined icon">expand_more</span>
+                    </div>
+
+                    <ul class="list">
+                        <li class="ja-jp" style="font-weight: bold;">日本語</li>
+                        <li class="en-us">English (US)</li>
+                        <li class="ko-kr">한국어</li>
+                        <li class="zh-cn">中文 (簡体)</li>
+                        <li class="zh-tw">中文 (繁体)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-logo">
+                <img class="footer-logo__img"
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_full_white_transparent.png" alt="YDITSのロゴ">
+                <p>© よね/Yone</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
