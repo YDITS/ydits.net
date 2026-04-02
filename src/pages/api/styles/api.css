@@ -11,8 +11,8 @@
 /* main */
 
 main {
-    background-color: #080814;
-    color: #f0f0f0;
+    /* background-color: #080814;
+    color: #f0f0f0; */
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -67,23 +67,26 @@ main {
 .path__locate {
     border-radius: 1.7em;
     padding: .5em .8em;
-    background-color: #ffffff10;
+    background-color: #0001;
+    /* background-color: #ffffff10; */
 
     &:hover {
-        background-color: #ffffff20;
+        background-color: #0002;
+        /* background-color: #ffffff20; */
         user-select: none;
     }
 
     &:active {
-        background-color: #ffffff40;
+        background-color: #0004;
+        /* background-color: #ffffff40; */
     }
 }
 
 /* a */
 
 a {
-    /* color: #0ca788; */
-    color: #25caa9;
+    color: #0ca788;
+    /* color: #25caa9; */
     text-decoration: none;
 
     &:hover {
@@ -103,8 +106,8 @@ a {
 }
 
 .hero__title {
-    /* background: linear-gradient(128deg, #0556b3, #8f00b3); */
-    background: linear-gradient(128deg, #0b6ad7, #aa15cf);
+    background: linear-gradient(128deg, #0556b3, #8f00b3);
+    /* background: linear-gradient(128deg, #0b6ad7, #aa15cf); */
     background-clip: text;
     font-size: 5rem;
     font-weight: 700;
@@ -133,11 +136,11 @@ a {
     border-top: 4px solid #eea14a;
     border-radius: .5rem;
     padding: 1rem;
-    /* background-color: #ffdbb1; */
+    background-color: #ffdbb1;
     /* background-color: #684823; */
-    background: linear-gradient(128deg, #684823, #a16d32);
-    /* color: #222; */
-    color: #f0f0f0;
+    /* background: linear-gradient(128deg, #684823, #a16d32); */
+    color: #222;
+    /* color: #f0f0f0; */
 }
 
 .notice_p {
@@ -178,8 +181,8 @@ a {
 }
 
 .api-links__li {
-    /* background-color: #0001; */
-    background-color: #ffffff18;
+    background-color: #0001;
+    /* background-color: #ffffff18; */
     border-radius: 1rem;
     padding: 1rem;
     list-style: none;
@@ -303,19 +306,21 @@ a {
 
 #schemas code {
     padding: .2em;
-    /* background-color: #80808040; */
-    background-color: #000;
-    color: #f1bf9b;
+    background-color: #80808040;
+    /* background-color: #000; */
+    /* color: #158a5d; */
+    color: #222;
+    /* color: #f1bf9b; */
 }
 
 table tbody tr:nth-of-type(odd) {
-    /* background-color: #0000401a; */
-    background-color: #f0f0f01a;
+    background-color: #0000401a;
+    /* background-color: #f0f0f01a; */
 }
 
 table tbody tr:nth-of-type(even) {
-    /* background-color: #0000400d; */
-    background-color: #f0f0f00d;
+    background-color: #0000400d;
+    /* background-color: #f0f0f00d; */
 }
 
 table tbody th,
@@ -325,10 +330,10 @@ table tbody td {
 
 .endpoint {
     padding: .5em;
-    /* background-color: #222; */
-    background-color: #000;
-    /* color: #fff; */
-    color: #f0f0f0;
+    background-color: #222;
+    /* background-color: #000; */
+    color: #fff;
+    /* color: #f0f0f0; */
     border-radius: 0.5rem;
 }
 
