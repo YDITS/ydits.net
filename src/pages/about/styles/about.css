@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*!
+
+    YDITS Site
+
+    Copyright (C) よね/Yone
+
+*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: 796px;
+}
+
+.article__title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.article__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    list-style: none;
+}
+
+.article__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.article__item-title {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    &::before {
+        display: block;
+        width: 4px;
+        height: auto;
+        border-radius: 2px;
+        background-color: #c0c0c0ff;
+        content: "";
+    }
+}
+
+.article__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.7rem;
+}

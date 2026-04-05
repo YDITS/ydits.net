@@ -15,8 +15,9 @@
     <title>YDITS Official Website</title>
     <meta name="description"
         content="The YDITS official website. YDITS is a disaster prevention service that develops applications and other services with the target of quickly providing users with the optimal disaster prevention information.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
     <!-- OGP -->
     <meta property="og:url" content="https://www.ydits.net/en-us/">
@@ -60,8 +61,9 @@
     <link rel="stylesheet" href="/styles/index.css">
 
     <style>
-        #about .aboutTitle {
-            font-size: 2em;
+        .about__item-title {
+            font-size: 2rem;
+            line-height: calc(2rem + 1rem);
         }
     </style>
 
@@ -80,45 +82,72 @@
 
         gtag('config', 'G-DFN4DKGM3F');
     </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
+        crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <section id="hero">
-            <div class="wrapper">
-                <img src="https://cdn.ydits.net/images/ydits_logos/ydits_hero.jpg" alt="YDITS Hero Image">
+        <article id="hero" class="hero">
+            <div class="fadein">
+                <img class="hero-image" src="https://cdn.ydits.net/images/ydits_logos/ydits_hero.jpg"
+                    alt="YDITS Hero Image">
             </div>
-        </section>
+        </article>
 
-        <section id="main">
-            <section class="sections" id="about">
-                <h2 class="sectionTitle">About YDITS</h2>
+        <article id="main" class="main">
+            <section id="about" class="section about">
+                <h2 class="section__title about__title">
+                    About YDITS
+                </h2>
 
-                <div class="content">
-                    <div class="content">
-                        <h2 class="aboutTitle">Quickly provides users with the optimal disaster prevention information
+                <div class="section__body about__body">
+                    <div class="about__item">
+                        <h2 class="about__item-title">
+                            Quickly provides users with the optimal disaster prevention information
                         </h2>
-                        <p class="aboutText">
-                            YDITS is a disaster prevention service that develops applications and other services with
+
+                        <p class="text about__item-text">
+                            YDITS (pronounced [waɪ dɪts]) is a disaster prevention service that develops applications
+                            and other
+                            services with
                             the target of quickly providing users with the optimal disaster prevention information.
                         </p>
                     </div>
 
-                    <div class="content">
-                        <h2 class="aboutTitle">Contribute to society in the form of disaster prevention</h2>
-                        <p class="aboutText">
-                            We all experience disasters in our daily lives, and disaster prevention information is
+                    <div class="about__item">
+                        <h2 class="about__item-title">
+                            Contribute to society in the form of disaster prevention
+                        </h2>
+
+                        <p class="text about__item-text">
+                            We all experience earthquake, tsunami, volcanic eruption, and other disasters in our daily
+                            lives, and disaster prevention information is
                             indispensable in times of disaster.<br>YDITS operator 'Yone' wants to contribute to society
                             in the form of disaster prevention.
                         </p>
                     </div>
+
+                    <div class="content" style="display: flex; flex-direction: row-reverse; justify-content: center;">
+                        <a class="link-button" href="./about/">
+                            <div class="wrapper">
+                                About YDITS
+                                <span class="material-symbols-outlined">
+                                    double_arrow
+                                </span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
 
-            <section class="sections" id="news">
-                <h2 class="sectionTitle">News</h2>
+            <section id="news" class="section news">
+                <h2 class="section__title">News</h2>
 
                 <div class="link">
                     <a class="link-button" href="./news/">
@@ -132,10 +161,16 @@
                 </div>
             </section>
 
-            <section class="sections" id="apps">
-                <h2 class="sectionTitle">Apps</h2>
+            <section id="apps" class="section apps">
+                <h2 class="section__title">Apps</h2>
 
-                <div class="link">
+                <div class="section__body apps__body">
+                    <p class="text">
+                        Displays the current earthquake early warning (EEW), expected seismic intensity and countdown*
+                        of EEW in the current location, history of the most recent earthquake information, expected
+                        typhoon path map, and rain cloud radar.
+                    </p>
+
                     <a class="link-button" href="./apps/web/">
                         <div class="wrapper">
                             YDITS for Web
@@ -147,56 +182,129 @@
                 </div>
             </section>
 
-            <section class="sections" id="officialAccounts">
-                <h2 class="sectionTitle">Links</h2>
+            <section id="api" class="section api">
+                <h2 class="section__title api__title">
+                    YDITS API
+                </h2>
 
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+                <div class="section__body api__body">
+                    <p class="text">
+                        (Sorry, but this section is not translated yet.)<br>
+                        防災情報をアプリケーションなどに組み込みやすいように設計された開発者向けのAPIです。当方サーバーとクラウドサーバーを併用し、エッジ処理やCDNよる配信を活用することで、サーバーをシステム的かつ地理的に冗長化し、大規模災害や障害が発生しても継続して情報を伝達するよう構築しています。<br><br>
+                        このAPIは現在開発段階のベータ版です。より高速で多様な情報の配信に取り組んでいます。
+                    </p>
 
-                    <a class="link-inline" target="_blank" href="https://www.twitter.com/YDITS_JP">
-                        X (Twitter)
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
-
-                    <a class="link-inline" target="_blank" href="https://www.youtube.com/@YDITS_JPN">
-                        YouTube
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
-
-                    <a class="link-inline" target="_blank" href="https://github.com/YDITS">
-                        GitHub
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
-
-                    <a class="link-inline" target="_blank" href="https://misskey.io/@ydits">
-                        Misskey
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
-
-                    <a class="link-inline" target="_blank" href="https://mastodon.social/@YDITS">
-                        Mastodon
+                    <a class="link-button" href="./api/">
+                        <div class="wrapper">
+                            YDITS API
+                            <span class="material-symbols-outlined">
+                                double_arrow
+                            </span>
+                        </div>
                     </a>
                 </div>
             </section>
-        </section>
+
+            <section id="colorScheme" class="section color-scheme">
+                <h2 class="section__title color-scheme">
+                    Shindo Color
+                </h2>
+
+                <div class="section__body color-scheme__body">
+                    <p>
+                        `shi-n-do` means Seismic Intensity in Japanese.<br>
+                        (Sorry, but this section is not translated yet.)<br>
+                        YDITS では独自のカラースキーム (震度配色) を使用しています。
+                    </p>
+
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a href="./color-scheme/" class="link-inline">
+                            <span class="link__text">
+                                YDITS Color Scheme (Shindo)
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="officialAccounts" class="section official-accounts">
+                <h2 class="section__title">Official Accounts</h2>
+
+                <div class="section__body official-accounts__body">
+
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://x.com/YDITS_EN">
+                            X
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://mastodon.social/@YDITS">
+                            Mastodon
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://misskey.io/@ydits">
+                            Misskey
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://www.youtube.com/@YDITS_JP">
+                            YouTube
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://github.com/YDITS">
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://www.facebook.com/YDITS/">
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google AdSense -->
+            <section class="sections adsense">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4842259448644646"
+                    data-ad-slot="6212268717" data-ad-format="auto" data-full-width-responsive="true">
+                </ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+            <!-- /Google AdSense -->
+        </article>
     </main>
 
     <footer></footer>

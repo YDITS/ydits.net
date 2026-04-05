@@ -105,35 +105,55 @@
     </header>
 
     <main>
-        <article id="hero">
-            <div class="wrapper">
-                <img src="https://cdn.ydits.net/images/ydits_logos/ydits_hero.jpg" alt="YDITS Hero Image">
+        <article id="hero" class="hero">
+            <div class="fadein">
+                <img class="hero-image" src="https://cdn.ydits.net/images/ydits_logos/ydits_hero.jpg"
+                    alt="YDITS Hero Image">
             </div>
         </article>
 
-        <article id="main">
-            <section class="sections" id="about">
-                <h2 class="sectionTitle">YDITSについて</h2>
+        <article id="main" class="main">
+            <section id="about" class="section about">
+                <h2 class="section__title about__title">
+                    YDITS について
+                </h2>
 
-                <div class="content">
-                    <div class="content">
-                        <h2 class="aboutTitle">利用者に最適な防災情報を迅速に提供する</h2>
-                        <p class="aboutText">
-                            YDITSは、利用者の皆様に最適な防災情報を迅速に提供することを目標に、アプリ開発などを行っている防災サービスです。
+                <div class="section__body about__body">
+                    <div class="about__item">
+                        <h2 class="about__item-title">
+                            利用者に最適な防災情報を迅速に提供する
+                        </h2>
+
+                        <p class="text about__item-text">
+                            YDITS (ワイディッツ) は、利用者の皆様に最適な防災情報を迅速に提供することを目標に、アプリ開発などを行っている防災サービスです。
                         </p>
                     </div>
 
-                    <div class="content">
-                        <h2 class="aboutTitle">防災の力で社会をもっと安全にする</h2>
-                        <p class="aboutText">
-                            私たちは、日常生活の中で災害に直面することがあります。災害発生時に必要不可欠なのが、正確で迅速な防災情報です。<br>YDITSの運営者『よね/Yone』は、「防災の力で社会をもっと安全にする」という想いを持って運営を行っています。
+                    <div class="about__item">
+                        <h2 class="about__item-title">
+                            防災の力で社会をもっと安全にする
+                        </h2>
+
+                        <p class="text about__item-text">
+                            私たちは、日常生活の中で地震・津波・噴火などの災害に直面することがあります。災害発生時に必要不可欠なのが、正確で迅速な防災情報です。<br>YDITSの運営者『よね/Yone』は、「防災の力で社会をもっと安全にする」という想いを持って運営を行っています。
                         </p>
+                    </div>
+
+                    <div class="content" style="display: flex; flex-direction: row-reverse; justify-content: center;">
+                        <a class="link-button" href="/about/">
+                            <div class="wrapper">
+                                YDITS について
+                                <span class="material-symbols-outlined">
+                                    double_arrow
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section class="sections" id="news">
-                <h2 class="sectionTitle">最新情報</h2>
+            <section id="news" class="section news">
+                <h2 class="section__title">最新情報</h2>
 
                 <div class="link">
                     <a class="link-button" href="/news/">
@@ -147,10 +167,15 @@
                 </div>
             </section>
 
-            <section class="sections" id="apps">
-                <h2 class="sectionTitle">アプリ</h2>
+            <section id="apps" class="section apps">
+                <h2 class="section__title">アプリ</h2>
 
-                <div class="link">
+                <div class="section__body apps__body">
+                    <p class="text">
+                        いま発表されている緊急地震速報、現在地の予想震度と主要動到達カウントダウン(警報対象の場合)、直近の地震情報の履歴、台風の予想進路図、雨雲レーダーを表示します。
+                        Webアプリケーションなのでインストールすることなく、どこでも、すばやく防災情報を確認できます。
+                    </p>
+
                     <a class="link-button" href="/apps/web/">
                         <div class="wrapper">
                             YDITS for Web
@@ -162,100 +187,109 @@
                 </div>
             </section>
 
-            <section id="links" class="section links sections">
-                <h2 id="linksSectionTitle" class="section-title sectionTitle">
-                    リンク
+            <section id="api" class="section api">
+                <h2 class="section__title api__title">
+                    YDITS API
                 </h2>
 
-                <div id="linksSectionBody" class="links__body section-body">
-                    <ul id="linksList" class="links__list">
-                        <li class="links__item">
-                            <div class="link">
-                                <span class="material-symbols-outlined">
-                                    double_arrow
-                                </span>
+                <div class="section__body api__body">
+                    <p class="text">
+                        防災情報をアプリケーションなどに組み込みやすいように設計された開発者向けのAPIです。当方サーバーとクラウドサーバーを併用し、エッジ処理やCDNよる配信を活用することで、サーバーをシステム的かつ地理的に冗長化し、大規模災害や障害が発生しても継続して情報を伝達するよう構築しています。<br><br>
+                        このAPIは現在開発段階のベータ版です。より高速で多様な情報の配信に取り組んでいます。
+                    </p>
 
-                                <a href="./api/" class="links__a link">
-                                    <span class="links__a-text link__text">
-                                        YDITS API
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="links__item">
-                            <div class="link">
-                                <span class="material-symbols-outlined">
-                                    double_arrow
-                                </span>
-
-                                <a href="./color-scheme/" class="links__a link">
-                                    <span class="links__a-text link__text">
-                                        YDITS カラースキーム (震度配色)
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
+                    <a class="link-button" href="/api/">
+                        <div class="wrapper">
+                            YDITS API
+                            <span class="material-symbols-outlined">
+                                double_arrow
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </section>
 
-            <section class="sections" id="officialAccounts">
-                <h2 class="sectionTitle">公式アカウント</h2>
+            <section id="colorScheme" class="section color-scheme">
+                <h2 class="section__title color-scheme">
+                    震度配色
+                </h2>
 
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+                <div class="section__body color-scheme__body">
+                    <p>YDITS では独自のカラースキーム (震度配色) を使用しています。</p>
 
-                    <a class="link-inline" target="_blank" href="https://www.twitter.com/YDITS_JP">
-                        X (Twitter)
-                    </a>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a href="./color-scheme/" class="link-inline">
+                            <span class="link__text">
+                                YDITS カラースキーム (震度配色)
+                            </span>
+                        </a>
+                    </div>
                 </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+            </section>
 
-                    <a class="link-inline" target="_blank" href="https://mastodon.social/@YDITS">
-                        Mastodon
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+            <section id="officialAccounts" class="section official-accounts">
+                <h2 class="section__title">公式アカウント</h2>
 
-                    <a class="link-inline" target="_blank" href="https://misskey.io/@ydits">
-                        Misskey
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+                <div class="section__body official-accounts__body">
 
-                    <a class="link-inline" target="_blank" href="https://www.youtube.com/@YDITS_JP">
-                        YouTube
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
 
-                    <a class="link-inline" target="_blank" href="https://github.com/YDITS">
-                        GitHub
-                    </a>
-                </div>
-                <div class="link">
-                    <span class="material-symbols-outlined">
-                        double_arrow
-                    </span>
+                        <a class="link-inline" target="_blank" href="https://x.com/YDITS_JP">
+                            X
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
 
-                    <a class="link-inline" target="_blank" href="https://www.facebook.com/YDITS/">
-                        Facebook
-                    </a>
+                        <a class="link-inline" target="_blank" href="https://mastodon.social/@YDITS">
+                            Mastodon
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://misskey.io/@ydits">
+                            Misskey
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://www.youtube.com/@YDITS_JP">
+                            YouTube
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://github.com/YDITS">
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="link">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+
+                        <a class="link-inline" target="_blank" href="https://www.facebook.com/YDITS/">
+                            Facebook
+                        </a>
+                    </div>
                 </div>
             </section>
 

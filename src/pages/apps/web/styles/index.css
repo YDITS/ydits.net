@@ -76,7 +76,7 @@ main {
     border-radius: 2px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     background-color: #f0f0f0ff;
     content: "";
 }
@@ -94,6 +94,7 @@ main {
     position: relative;
     font-size: clamp(1rem, calc(80vw / 8), 4rem);
     font-family: 'Zen Antique Soft', serif;
+    line-height: clamp(1rem, calc(80vw / 8), 4rem);
     color: #ffffffff;
 }
 

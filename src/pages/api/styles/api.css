@@ -111,6 +111,7 @@ a {
     background-clip: text;
     font-size: 5rem;
     font-weight: 700;
+    line-height: calc(5rem + 1rem);
     color: transparent;
 }
 

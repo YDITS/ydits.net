@@ -10,10 +10,11 @@
 
 :root {
     --header-height: 3.5rem;
-    --font-size: 14px;
     --body-background-color: #fff;
-    --font-weight: 400;
     --font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
+    --font-size: 14px;
+    --font-weight: 400;
+    --line-height: 2rem;
     --color: #222;
 
     --origin-alert-height: 4rem;
@@ -26,6 +27,7 @@
     scroll-behavior: smooth;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
+    line-height: var(--line-height);
 }
 
 body {
@@ -385,7 +387,7 @@ footer {
 
 .link-button {
     display: inline-block;
-    border-radius: calc((2rem + 24px) / 2);
+    border-radius: 100lvw;
     padding: 1rem 1.5rem;
     background-color: #404040ff;
     font-size: 1rem;
