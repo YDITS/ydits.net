@@ -434,6 +434,7 @@
                             <td>
                                 マグニチュード (Mj)<br>
                                 不明または仮定震源要素の場合は <code>null</code> とする<br>
+                                ※<code>condition</code> が <code>true</code> のときは「仮定震源要素」と表示し、<code>condition</code> が <code>false</code> かつ 本要素が <code>null</code> のときには「不明」と表示することを推奨<br>
                                 ※気象庁の電文フォーマットでは、仮定震源要素の場合は <code>M 1.0</code> の仮値としていますが、本APIでは情報の意図を正確に表すために <code>null</code> を使用します。
                             </td>
                         </tr>
@@ -446,6 +447,7 @@
                             <td>
                                 震源の深さ (km)<br>
                                 不明または仮定震源要素の場合は <code>null</code> とする<br>
+                                ※<code>condition</code> が <code>true</code> のときは「仮定震源要素」と表示し、<code>condition</code> が <code>false</code> かつ 本要素が <code>null</code> のときには「不明」と表示することを推奨<br>
                                 ※気象庁の電文フォーマットでは、仮定震源要素の場合は <code>10km</code> の仮値としていますが、本APIでは情報の意図を正確に表すために <code>null</code> を使用します。
                             </td>
                         </tr>
