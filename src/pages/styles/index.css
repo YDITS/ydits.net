@@ -8,10 +8,6 @@
 
 */
 
-.mobile-breakline {
-    display: none;
-}
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -201,9 +197,5 @@ header nav>ul>li>a {
 
     #about {
         font-size: 1em;
-    }
-
-    .mobileBreakline {
-        display: block;
     }
 }

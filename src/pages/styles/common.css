@@ -409,6 +409,16 @@ footer {
     }
 }
 
+/* mobile-break */
+
+.mobile-break {
+    display: none;
+
+    @media (width < 46rem) {
+        display: block;
+    }
+}
+
 /* link-inline */
 
 .link-inline {
