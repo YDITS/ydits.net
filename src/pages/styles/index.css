@@ -186,6 +186,11 @@ header nav>ul>li>a {
     width: fit-content;
 }
 
+.adsense {
+    width: 100%;
+    max-width: 769px;
+}
+
 @media (max-width: 768px) {
     header nav>ul>li>a {
         color: #010101;
