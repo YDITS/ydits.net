@@ -27,8 +27,8 @@
 /:lang/eewguideline/* /:lang/eew-guideline/:splat 308
 /webapp /apps/web/ 308
 /webapp/* /apps/web/:splat 308
-/:lang/eewguideline /:lang/eew-guideline/ 308
-/:lang/eewguideline/* /:lang/eew-guideline/:splat 308
+/:lang/webapp /:lang/apps/web/ 308
+/:lang/webapp/* /:lang/apps/web/:splat 308
 
 # URL structure migration
 
