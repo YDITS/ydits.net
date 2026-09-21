@@ -3,11 +3,11 @@
 /ja-jp / 307
 /ja-jp/* /:splat 307
 
-/search/:query https://www.google.com/search?q=site%3Aydits.net%20:query 307
-
 /sitemap.xml /sitemap-index.xml 308
 /news/sitemap.xml /sitemap-news.xml 308
 /news/sitemap-news.xml /sitemap-news.xml 308
+
+/search/:query https://www.google.com/search?q=site%3Aydits.net%20:query 307
 
 /app /apps/ 308
 /app/* /apps/:splat 308
@@ -36,9 +36,7 @@
 
 /Styles/* /styles/:splat 308
 /Scripts/* /scripts/:splat 308
-
 /web /apps/web/ 308
 /web/* /apps/web/:splat 308
-
 /api/eew /api/ 308
 /api/eew/ /api/ 308
