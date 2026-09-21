@@ -1,5 +1,13 @@
+/ja-jp/* /:splat 307
+
 /sitemap.xml /sitemap-index.xml 308
+/news/sitemap.xml /sitemap-news.xml 308
 /news/sitemap-news.xml /sitemap-news.xml 308
+
+/app/web/* /apps/web/:splat 308
+/webapp/* /apps/web/:splat 308
+/colorscheme/* /color-scheme/:splat 308
+/eewguideline/* /eew-guideline/:splat 308
 
 /styles/main.css /styles/common.css 308
 /Styles/main.css /styles/common.css 308
@@ -7,10 +15,10 @@
 /Styles/* /styles/:splat 308
 /Scripts/* /scripts/:splat 308
 
-/web/ /apps/web/ 308
-/en-us/web/ /en-us/apps/web/ 308
-/ko-kr/web/ /ko-kr/apps/web/ 308
-/zh-cn/web/ /zh-cn/apps/web/ 308
-/zh-tw/web/ /zh-tw/apps/web/ 308
+/web/* /apps/web/:splat 308
+/en-us/web/* /en-us/apps/web/:splat 308
+/ko-kr/web/* /ko-kr/apps/web/:splat 308
+/zh-cn/web/* /zh-cn/apps/web/:splat 308
+/zh-tw/web/* /zh-tw/apps/web/:splat 308
 
 /api/eew/ /api/ 308
