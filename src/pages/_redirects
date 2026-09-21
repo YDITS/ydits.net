@@ -1,4 +1,4 @@
-# URL structure normalization
+# URL structure normalization (Not previously used paths.)
 
 /ja-jp / 307
 /ja-jp/* /:splat 307
@@ -30,7 +30,7 @@
 /:lang/webapp /:lang/apps/web/ 308
 /:lang/webapp/* /:lang/apps/web/:splat 308
 
-# URL structure migration
+# URL structure migration (Previously used paths.)
 
 /styles/main.css /styles/common.css 308
 
