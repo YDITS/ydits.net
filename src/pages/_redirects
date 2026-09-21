@@ -1,28 +1,46 @@
 # URL structure normalization
 
+/ja-jp / 307
 /ja-jp/* /:splat 307
+
+/search/:query https://www.google.com/search?q=site%3Aydits.net%20:query" 307
 
 /sitemap.xml /sitemap-index.xml 308
 /news/sitemap.xml /sitemap-news.xml 308
 /news/sitemap-news.xml /sitemap-news.xml 308
 
-/app/web/* /apps/web/:splat 308
-/webapp/* /apps/web/:splat 308
+/app /apps/ 308
+/app/* /apps/:splat 308
+/:lang/app /:lang/apps/ 308
+/:lang/app/* /:lang/apps/:splat 308
+/doc /docs/ 308
+/doc/* /docs/:splat 308
+/:lang/doc /:lang/docs/ 308
+/:lang/doc/* /:lang/docs/:splat 308
+/colorscheme /color-scheme/ 308
 /colorscheme/* /color-scheme/:splat 308
+/:lang/colorscheme /:lang/color-scheme/ 308
+/:lang/colorscheme/* /:lang/color-scheme/:splat 308
+/eewguideline /eew-guideline/ 308
 /eewguideline/* /eew-guideline/:splat 308
+/:lang/eewguideline /:lang/eew-guideline/ 308
+/:lang/eewguideline/* /:lang/eew-guideline/:splat 308
+/webapp /apps/web/ 308
+/webapp/* /apps/web/:splat 308
+/:lang/eewguideline /:lang/eew-guideline/ 308
+/:lang/eewguideline/* /:lang/eew-guideline/:splat 308
 
 # URL structure migration
 
 /styles/main.css /styles/common.css 308
-/Styles/main.css /styles/common.css 308
 
 /Styles/* /styles/:splat 308
 /Scripts/* /scripts/:splat 308
 
+/web /apps/web/ 308
 /web/* /apps/web/:splat 308
-/en-us/web/* /en-us/apps/web/:splat 308
-/ko-kr/web/* /ko-kr/apps/web/:splat 308
-/zh-cn/web/* /zh-cn/apps/web/:splat 308
-/zh-tw/web/* /zh-tw/apps/web/:splat 308
+/:lang/web /:lang/apps/web/ 308
+/:lang/web/* /:lang/apps/web/:splat 308
 
+/api/eew /api/ 308
 /api/eew/ /api/ 308
