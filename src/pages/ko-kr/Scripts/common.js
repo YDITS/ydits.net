@@ -2,7 +2,9 @@
  *
  * YDITS Website
  *
- * Copyright (C) よね/Yone
+ * Copyright (C) 2022-2026 よね/Yone
+ * 
+ * https://github.com/YDITS/ydits.net
  *
  */
 

@@ -1,14 +1,14 @@
-/* 
+@charset "UTF-8";
 
-    main.css | news | YDITS Site
+/*!
 
-   Copyright (C) よね/Yone
+    YDITS Website
 
-    No modification or reproduction of any kind is permitted.
-    改変や複製を一切禁じます。
+    Copyright (C) 2022-2026 よね/Yone
+
+    https://github.com/YDITS/ydits.net
 
 */
-@charset "UTF-8";
 
 #main {
     padding: 2em 10vw;

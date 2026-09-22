@@ -1,11 +1,10 @@
-/*
+/*!
  *
- * common.js | YDITS Site
+ * YDITS Website
  *
- * (c) よね/Yone
- *
- * No modification or reproduction of any kind is permitted.
- * 改変や複製を一切禁じます。
+ * Copyright (C) 2022-2026 よね/Yone
+ * 
+ * https://github.com/YDITS/ydits.net
  *
  */
 
