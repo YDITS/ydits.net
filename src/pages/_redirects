@@ -1,4 +1,4 @@
-# URL structure normalization (Not previously used paths.)
+# URL structure normalization (URL variants; Non-legacy)
 
 /ja-jp / 307
 /ja-jp/* /:splat 307
@@ -6,8 +6,6 @@
 /sitemap.xml /sitemap-index.xml 308
 /news/sitemap.xml /sitemap-news.xml 308
 /news/sitemap-news.xml /sitemap-news.xml 308
-
-/search/:query https://www.google.com/search?q=site%3Aydits.net%20:query 307
 
 /app /apps/ 308
 /app/* /apps/:splat 308
@@ -30,7 +28,7 @@
 /:lang/webapp /:lang/apps/web/ 308
 /:lang/webapp/* /:lang/apps/web/:splat 308
 
-# URL structure migration (Previously used paths.)
+# URL structure migration (Legacy URLs)
 
 /styles/main.css /styles/common.css 308
 
