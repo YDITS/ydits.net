@@ -177,8 +177,8 @@ header {
     bottom: 2rem;
     right: 2rem;
     z-index: var(--header-menu-button-z-index);
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 100lvw;
     display: none;
     align-items: center;
@@ -213,7 +213,7 @@ header {
 }
 
 .header-menu-button__icon {
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--color);
 }
 
