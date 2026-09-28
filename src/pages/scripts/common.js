@@ -134,9 +134,9 @@ function header(props) {
     </div>
 
     <nav id="headerMenu" class="header-menu">
-        <ul>
-            <li><a href="${props.toppage}">${props.i18n.home}</a></li>
-            <li><a href="https://www.yoneyo.com/#contact">${props.i18n.contact}</a></li>
+        <ul class="header-menu__list">
+            <li class="header-menu__item"><a href="${props.toppage}">${props.i18n.home}</a></li>
+            <li class="header-menu__item"><a href="https://www.yoneyo.com/#contact">${props.i18n.contact}</a></li>
         </ul>
     </nav>
 </div>`);
