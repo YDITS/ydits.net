@@ -24,6 +24,7 @@ main {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
+    word-break: keep-all;
 }
 
 .eew-guideline__list {
@@ -44,7 +45,7 @@ main {
     align-items: stretch;
     gap: 0.5em;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
 
     &::before {
         display: block;
