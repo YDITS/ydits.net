@@ -134,7 +134,7 @@ a {
 
 .notice {
     margin: 0 auto;
-    width: calc(100% - 2rem);
+    width: 100%;
     max-width: 512px;
     border-top: 4px solid #eea14a;
     border-radius: .5rem;
@@ -144,6 +144,7 @@ a {
     /* background: linear-gradient(128deg, #684823, #a16d32); */
     color: #222;
     /* color: #f0f0f0; */
+    line-height: 1.75;
 }
 
 .notice_p {
