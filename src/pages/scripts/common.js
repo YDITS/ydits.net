@@ -106,7 +106,10 @@ function loadCommonElements({ language }) {
         i18n: i18n[language],
         toppage: language === "ja-jp" ? "/" : `/${language}/`,
     };
-    const _footerProps = i18n[language];
+    const _footerProps = {
+        language,
+        i18n: i18n[language],
+    };
 
     document.querySelector("header").innerHTML = header(_headerProps);
     document.querySelector("footer").innerHTML = footer(_footerProps);
@@ -148,18 +151,38 @@ function footer(props) {
         <span class="material-symbols-outlined footer__language-selector__open">
             language
         </span>
-        <div class="pulldownMenu language-selector" id="langSelect">
-            <div class="label">
-                <span class="title">Language</span>
-                <span class="material-symbols-outlined icon">expand_more</span>
-            </div>
+        <div class="pulldown-menu language-selector" id="langSelect" aria-expanded="false" aria-controls="langSelectOptions">
+            <button class="pulldown-menu__selector" aria-controls="langSelectOptions">
+                <span class="pulldown-menu__title">Language</span>
+                <span class="pulldown-menu__expand-icon material-symbols-outlined">expand_more</span>
+            </button>
 
-            <ul class="list">
-                <li class="ja-jp" style="font-weight: bold;">日本語</li>
-                <li class="en-us">English (US)</li>
-                <li class="ko-kr">한국어</li>
-                <li class="zh-cn">中文 (簡体)</li>
-                <li class="zh-tw">中文 (繁体)</li>
+            <ul id="langSelectOptions" class="pulldown-menu__options ${props.language}">
+                <li class="pulldown-menu__option ja-jp">
+                    <button>
+                        日本語
+                    </button>
+                </li>
+                <li class="pulldown-menu__option en-us">
+                    <button>
+                        English (US)
+                    </button>
+                </li>
+                <li class="pulldown-menu__option ko-kr">
+                    <button>
+                        한국어
+                    </button>
+                </li>
+                <li class="pulldown-menu__option zh-cn">
+                    <button>
+                        中文 (簡体)
+                    </button>
+                </li>
+                <li class="pulldown-menu__option zh-tw">
+                    <button>
+                        中文 (繁体)
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -184,12 +207,15 @@ function initializeHeaderMenuEventHandler() {
 }
 
 function initializeLanguageSelectorEventHandler() {
-    const langSelectLabelQuery = '#langSelect .label';
+    const langSelectLabelQuery = '#langSelect .pulldown-menu__selector';
     document.querySelector(langSelectLabelQuery)?.addEventListener("click", () => {
-        document?.querySelector("#langSelect")?.classList?.toggle("active");
+        // document?.querySelector("#langSelect")?.classList?.toggle("expanded");
+        const $langSelect = document?.querySelector("#langSelect");
+        const toggleTo = $langSelect?.getAttribute("aria-expanded") === "true" ? "false" : "true";
+        $langSelect?.setAttribute("aria-expanded", toggleTo);
     });
     pageLangages.forEach(lang => {
-        document.querySelector(`#langSelect .${lang}`)?.addEventListener("click", () => {
+        document.querySelector(`.pulldown-menu__option.${lang}`)?.addEventListener("click", () => {
             changePageLanguage(lang);
         });
     });

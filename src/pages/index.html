@@ -327,18 +327,38 @@
                 <span class="material-symbols-outlined footer__language-selector__open">
                     language
                 </span>
-                <div class="pulldownMenu language-selector" id="langSelect">
-                    <div class="label">
-                        <span class="title">Language</span>
-                        <span class="material-symbols-outlined icon">expand_more</span>
-                    </div>
+                <div class="pulldown-menu language-selector" id="langSelect" aria-expanded="false">
+                    <button class="pulldown-menu__selector">
+                        <span class="pulldown-menu__title">Language</span>
+                        <span class="pulldown-menu__expand-icon material-symbols-outlined">expand_more</span>
+                    </button>
 
-                    <ul class="list">
-                        <li class="ja-jp" style="font-weight: bold;">日本語</li>
-                        <li class="en-us">English (US)</li>
-                        <li class="ko-kr">한국어</li>
-                        <li class="zh-cn">中文 (簡体)</li>
-                        <li class="zh-tw">中文 (繁体)</li>
+                    <ul class="pulldown-menu__options">
+                        <li class="pulldown-menu__option ja-jp" style="font-weight: bold;">
+                            <button>
+                                日本語
+                            </button>
+                        </li>
+                        <li class="pulldown-menu__option en-us">
+                            <button>
+                                English (US)
+                            </button>
+                        </li>
+                        <li class="pulldown-menu__option ko-kr">
+                            <button>
+                                한국어
+                            </button>
+                        </li>
+                        <li class="pulldown-menu__option zh-cn">
+                            <button>
+                                中文 (簡体)
+                            </button>
+                        </li>
+                        <li class="pulldown-menu__option zh-tw">
+                            <button>
+                                中文 (繁体)
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
