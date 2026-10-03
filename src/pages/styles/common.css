@@ -464,3 +464,101 @@ footer {
 .language-selector {
     border: #808080ff solid 2px;
 }
+
+/* pulldownMenu */
+
+.pulldownMenu {
+    position: relative;
+    display: inline-block;
+    border-radius: 2em;
+    background-color: #303030ff;
+    color: #ffffffff;
+    user-select: none;
+}
+
+.pulldownMenu .label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2em;
+    background-color: #303030ff;
+    padding: .1em 1em;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.pulldownMenu .label:hover {
+    background-color: #505050ff;
+}
+
+.pulldownMenu .label:active {
+    background-color: #808080ff;
+}
+
+.pulldownMenu .title {
+    margin-right: 1em;
+}
+
+.pulldownMenu .icon {
+    transition: all .2s;
+    transform: rotate(-90deg);
+}
+
+.pulldownMenu.active .icon {
+    display: inline-block;
+    transform: rotate(-180deg);
+}
+
+.pulldownMenu .list.active {
+    display: block;
+}
+
+.pulldownMenu .list {
+    position: absolute;
+    top: auto;
+    bottom: calc(100% + 2em);
+    display: none;
+
+    padding: .5em;
+    min-width: calc(10em + 1em);
+    border-radius: .5em;
+
+    background-color: #303030ff;
+    list-style: none;
+}
+
+.pulldownMenu.active .list {
+    display: block;
+    overflow: auto;
+    max-height: 32em;
+    animation-name: pulldown;
+    animation-duration: 1s;
+}
+
+@keyframes pulldown {
+    from {
+        opacity: 0;
+        max-height: 0px;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 32em;
+    }
+}
+
+.pulldownMenu .list li {
+    border-radius: 1.5em;
+    padding: .1em 1em;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.pulldownMenu .list li:hover {
+    background-color: #606060ff;
+}
+
+.pulldownMenu .list li:active {
+    background-color: #808080ff;
+}
