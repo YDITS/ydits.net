@@ -449,6 +449,7 @@ footer {
 /* link-button */
 
 .link-button {
+    display: block;
     border-radius: 100lvw;
     padding: 1rem 1.5rem;
     background-color: #444;
