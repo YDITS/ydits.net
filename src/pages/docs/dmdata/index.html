@@ -211,26 +211,27 @@
         .disclaimer {
             display: flex;
             flex-direction: column;
-            gap: .5rem;
-            padding: .8rem;
-            background-color: #e0e0e0;
-            color: #606060;
+            gap: 1.5rem;
+            padding: 1.5rem 1rem;
+            background-color: #eee;
+            color: #333;
         }
 
         .disclaimer__title {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
 
         .disclaimer__content {
-            font-size: .8rem;
+            font-size: 1rem;
+            line-height: 1.75;
         }
 
         .disclaimer__ul {
             display: flex;
             flex-direction: column;
-            gap: .3rem;
-            padding: 0 1em;
-            list-style: none;
+            gap: 1rem;
+            padding: 0 1rem 0 2rem;
+            list-style: square;
         }
 
         @media (max-width: 768px) {
@@ -285,7 +286,7 @@
                 <h2 class="section__title overview__title section__title--bar">Project DM-D.S.S とは</h2>
 
                 <p class="section__content overview__content">
-                    Project DM-D.S.S は、個人によって運営されている、多様な防災気象情報を提供するAPIサービスです。<br>
+                    Project DM-D.S.S は、個人によって運営されている、多様な防災気象情報を提供する有料APIサービスです。<br>
                 </p>
 
                 <a href="https://dmdata.jp/" id="officialSiteLink" class="overview__official-site-link">
@@ -315,7 +316,7 @@
 
                             <p class="features-list__description">
                                 Project DM-D.S.S
-                                が提供しているアプリケーションは予報業務許可（地震動）を取得しており、気象庁のガイドラインに沿った運用が行われているため、情報の信頼性が高いです。
+                                が提供しているアプリケーションは予報業務許可（地震動）を取得しており、気象庁のガイドラインに沿った運用が行われているため、データ配信の信頼性が高いです。
                             </p>
                         </li>
 
@@ -559,15 +560,26 @@
                 <ul class="disclaimer__ul">
                     <li class="disclaimer__li">
                         <p>
-                            本ページは Project DM-D.S.S の公式ではありません。YDITS
-                            とは別の開発者が運営しているサービスです。日本の防災事業をさらに普及させる目的で、YDITS以外の便利な防災サービスをご紹介しています。本ページについて Project
-                            DM-D.S.S に問い合わせることはお控えください。
+                            本ページは Project DM-D.S.S の公式ではありません。Project DM-D.S.S は そうし 様 (@soshi1822) が運営しているサービスです。
+                            日本の防災事業をさらに普及させる目的で、YDITS以外の便利な防災サービスをご紹介しています。
                         <p>
                     </li>
 
                     <li>
                         <p>
-                            本ページの内容は、2026年10月1日時点のものであり、提供内容は変更される場合があります。サービスを利用する前に、公式サイトで最新の情報をご確認ください。
+                            本ページについて Project DM-D.S.S に問い合わせることはお控えください。
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            緊急地震速報や防災情報には技術的な特性や限界があります。情報の性質をよく理解したうえでご利用ください。
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            本ページの内容は 2026年10月1日時点のものであり、提供内容は変更される場合があります。サービスを利用する前に、公式サイトで最新の情報をご確認ください。
                         </p>
                     </li>
 
