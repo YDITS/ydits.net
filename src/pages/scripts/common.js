@@ -39,6 +39,11 @@ const i18n = {
         "home": "首页",
         "contact": "联络",
     },
+    "zh-tw": {
+        "logoImgAlt": "YDITS's logo",
+        "home": "首頁",
+        "contact": "聯絡",
+    },
 }
 
 let headerMenuButton;
