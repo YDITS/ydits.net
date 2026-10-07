@@ -118,8 +118,6 @@
 }
 
 .about__item-title {
-    word-break: keep-all;
-    word-wrap: break-word;
     font-size: 3rem;
     font-weight: bold;
     color: #333;
