@@ -28,7 +28,12 @@ const i18n = {
         "logoImgAlt": "YDITS's logo",
         "home": "Home",
         "contact": "Contact Me",
-    }
+    },
+    "ko-kr": {
+        "logoImgAlt": "YDITS's logo",
+        "home": "홈",
+        "contact": "문의",
+    },
 }
 
 let headerMenuButton;
