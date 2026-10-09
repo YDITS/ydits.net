@@ -8,254 +8,486 @@
  *
  */
 
-const origin = "www.ydits.net";
+import { Render } from "https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js";
 
-const pageLangages = [
-    "ja-jp",
-    "en-us",
-    "ko-kr",
-    "zh-cn",
-    "zh-tw",
-];
+class Page {
+    /**
+     * @type {string}
+     */
+    static #ORIGIN = "www.ydits.net";
 
-const i18n = {
-    "ja-jp": {
-        "logoImgAlt": "YDITSのロゴ",
-        "home": "ホーム",
-        "contact": "お問い合わせ",
-    },
-    "en-us": {
-        "logoImgAlt": "YDITS's logo",
-        "home": "Home",
-        "contact": "Contact Me",
-    },
-    "ko-kr": {
-        "logoImgAlt": "YDITS's logo",
-        "home": "홈",
-        "contact": "문의",
-    },
-    "zh-cn": {
-        "logoImgAlt": "YDITS's logo",
-        "home": "首页",
-        "contact": "联络",
-    },
-    "zh-tw": {
-        "logoImgAlt": "YDITS's logo",
-        "home": "首頁",
-        "contact": "聯絡",
-    },
-}
+    /**
+     * @type {Array<string>}
+     */
+    static #PAGE_LANGUAGES = [
+        "ja-jp",
+        "en-us",
+        "ko-kr",
+        "zh-cn",
+        "zh-tw",
+    ];
 
-let headerMenuButton;
-let headerMenu;
-
-main();
-
-function main() {
-    checkOriginAndAlert();
-    initializeCommonElements();
-}
-
-function checkOriginAndAlert() {
-    if (!isOriginAlertClosed() && !checkOrigin(origin)) {
-        alertOrigin();
+    /**
+     * @type {object}
+     */
+    static #i18n = {
+        "ja-jp": {
+            "logoImgAlt": "YDITSのロゴ",
+            "home": "ホーム",
+            "contact": "お問い合わせ",
+        },
+        "en-us": {
+            "logoImgAlt": "YDITS's logo",
+            "home": "Home",
+            "contact": "Contact Me",
+        },
+        "ko-kr": {
+            "logoImgAlt": "YDITS's logo",
+            "home": "홈",
+            "contact": "문의",
+        },
+        "zh-cn": {
+            "logoImgAlt": "YDITS's logo",
+            "home": "首页",
+            "contact": "联络",
+        },
+        "zh-tw": {
+            "logoImgAlt": "YDITS's logo",
+            "home": "首頁",
+            "contact": "聯絡",
+        },
     }
-}
 
-function isOriginAlertClosed() {
-    return window.localStorage.getItem("origin-alert-closed") === "true";
-}
+    /**
+     * @type {Render}
+     */
+    #render;
 
-function checkOrigin(hostname) {
-    if (window.location.hostname !== hostname) {
-        return false;
+    /**
+     * @type {HTMLElement}
+     */
+    #$headerMenu;
+
+    /**
+     * @type {HTMLElement}
+     */
+    #$headerMenuButton;
+
+    /**
+     * @param {{
+     *     render: Render,
+     * }} 
+     */
+    constructor({ render }) {
+        this.#render = render;
     }
-    return true;
-}
 
-function alertOrigin() {
-    const alertTextStrong = document.createElement("strong");
-    alertTextStrong.textContent = "\"ydits.net\" ではないドメインからアクセスされています。このサイトでは、プライバシー情報やパスワードを送信しないでください。"
-    const alertText = document.createElement("p");
-    alertText.classList.add("origin-alert__text");
-    alertText.appendChild(alertTextStrong);
-
-    const closeButton = document.createElement("button");
-    closeButton.classList.add("origin-alert__close-button");
-    closeButton.textContent = "今後表示しない";
-    closeButton.addEventListener("click", () => {
-        alertElement.remove();
-        document.body.style.paddingBottom = "0";
-        window.localStorage.setItem("origin-alert-closed", "true");
-    });
-
-    const alertElement = document.createElement("div");
-    alertElement.classList.add("origin-alert");
-    alertElement.appendChild(alertText);
-    alertElement.appendChild(closeButton);
-
-    document.body.prepend(alertElement);
-    document.body.style.paddingBottom = "var(--origin-alert-height)";
-}
-
-function initializeCommonElements() {
-    const pageLanguage = getPageLanguage();
-    loadCommonElements({ language: pageLanguage });
-    initializeHeaderMenuEventHandler();
-    initializeLanguageSelectorEventHandler();
-}
-
-function getPageLanguage() {
-    const pathname = window.location.pathname;
-    const pathArray = pathname.split("/");
-
-    if (pageLangages.includes(pathArray[1])) {
-        return pathArray[1];
-    } else {
-        return "ja-jp";
+    /**
+     * @returns {void}
+     */
+    initialize() {
+        this.#checkOriginAndAlert();
+        this.#initializeCommonElements();
     }
-}
 
-function loadCommonElements({ language }) {
-    const _headerProps = {
-        i18n: i18n[language],
-        toppage: language === "ja-jp" ? "/" : `/${language}/`,
-    };
-    const _footerProps = {
-        language,
-        i18n: i18n[language],
-    };
-
-    document.querySelector("header").innerHTML = header(_headerProps);
-    document.querySelector("footer").innerHTML = footer(_footerProps);
-    const trying = () => {
-        try {
-            headerMenuButton = document.getElementById("headerMenuButton");
-            headerMenu = document.getElementById("headerMenu");
-        } catch (error) {
-            setTimeout(trying, 100);
+    /**
+     * @returns {void}
+     */
+    #checkOriginAndAlert() {
+        if (!this.#isOriginAlertClosed() && !this.#checkOrigin(Page.#ORIGIN)) {
+            this.#alertOrigin();
         }
     }
-    trying();
-}
 
-function header(props) {
-    return (`<div class="header__content">
-    <a class="header-logo" href="${props.toppage}">
-        <img class="header-logo__img" src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png"
-            alt="${props.i18n.logoImgAlt}">
-    </a>
-
-    <div id="headerMenuButton" class="header-menu-button">
-        <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">menu</span>
-        <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--close">close</span>
-    </div>
-
-    <nav id="headerMenu" class="header-menu">
-        <ul class="header-menu__list">
-            <li class="header-menu__item"><a href="${props.toppage}">${props.i18n.home}</a></li>
-            <li class="header-menu__item"><a href="https://www.yoneyo.com/#contact">${props.i18n.contact}</a></li>
-        </ul>
-    </nav>
-</div>`);
-}
-
-function footer(props) {
-    return (`<div class="footer__content">
-    <div id="lang" class="footer__language-selector">
-        <span class="material-symbols-outlined footer__language-selector__open">
-            language
-        </span>
-        <div class="pulldown-menu language-selector" id="langSelect" aria-expanded="false" aria-controls="langSelectOptions">
-            <button class="pulldown-menu__selector" aria-controls="langSelectOptions">
-                <span class="pulldown-menu__title">Language</span>
-                <span class="pulldown-menu__expand-icon material-symbols-outlined">expand_more</span>
-            </button>
-
-            <ul id="langSelectOptions" class="pulldown-menu__options ${props.language}">
-                <li class="pulldown-menu__option ja-jp">
-                    <button>
-                        日本語
-                    </button>
-                </li>
-                <li class="pulldown-menu__option en-us">
-                    <button>
-                        English (US)
-                    </button>
-                </li>
-                <li class="pulldown-menu__option ko-kr">
-                    <button>
-                        한국어
-                    </button>
-                </li>
-                <li class="pulldown-menu__option zh-cn">
-                    <button>
-                        中文 (簡体)
-                    </button>
-                </li>
-                <li class="pulldown-menu__option zh-tw">
-                    <button>
-                        中文 (繁体)
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-logo">
-        <img class="footer-logo__img"
-            src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_full_white_transparent.png" alt="YDITSのロゴ">
-        <p>© よね/Yone</p>
-    </div>
-</div>`);
-}
-
-function initializeHeaderMenuEventHandler() {
-    const trying = () => {
-        try {
-            headerMenuButton?.addEventListener("click", () => onClickHeaderMenuButton());
-        } catch (error) {
-            setTimeout(trying, 100);
-        }
+    /**
+     * @returns {boolean}
+     */
+    #isOriginAlertClosed() {
+        return window.localStorage.getItem("origin-alert-closed") === "true";
     }
-    trying();
-}
 
-function initializeLanguageSelectorEventHandler() {
-    const langSelectLabelQuery = '#langSelect .pulldown-menu__selector';
-    document.querySelector(langSelectLabelQuery)?.addEventListener("click", () => {
-        // document?.querySelector("#langSelect")?.classList?.toggle("expanded");
-        const $langSelect = document?.querySelector("#langSelect");
-        const toggleTo = $langSelect?.getAttribute("aria-expanded") === "true" ? "false" : "true";
-        $langSelect?.setAttribute("aria-expanded", toggleTo);
-    });
-    pageLangages.forEach(lang => {
-        document.querySelector(`.pulldown-menu__option.${lang}`)?.addEventListener("click", () => {
-            changePageLanguage(lang);
+    /**
+     * @param {string} hostname 
+     * @returns {boolean}
+     */
+    #checkOrigin(hostname) {
+        if (window.location.hostname !== hostname) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @returns {void}
+     */
+    #alertOrigin() {
+        const alertTextStrong = document.createElement("strong");
+        alertTextStrong.textContent = "\"ydits.net\" ではないドメインからアクセスされています。このサイトでは、プライバシー情報やパスワードを送信しないでください。"
+        const alertText = document.createElement("p");
+        alertText.classList.add("origin-alert__text");
+        alertText.appendChild(alertTextStrong);
+
+        const closeButton = document.createElement("button");
+        closeButton.classList.add("origin-alert__close-button");
+        closeButton.textContent = "今後表示しない";
+        closeButton.addEventListener("click", () => {
+            alertElement.remove();
+            document.body.style.paddingBottom = "0";
+            window.localStorage.setItem("origin-alert-closed", "true");
         });
-    });
-}
 
-function onClickHeaderMenuButton() {
-    headerMenuButton?.classList?.toggle("opened");
-    headerMenu?.classList?.toggle("active");
-}
+        const alertElement = document.createElement("div");
+        alertElement.classList.add("origin-alert");
+        alertElement.appendChild(alertText);
+        alertElement.appendChild(closeButton);
 
-function changePageLanguage(targetLanguage) {
-    const pathname = window.location.pathname;
-    const pathArray = pathname.split("/");
+        document.body.prepend(alertElement);
+        document.body.style.paddingBottom = "var(--origin-alert-height)";
+    }
 
-    if (pageLangages.includes(pathArray[1])) {
-        if (targetLanguage == "ja-jp") {
-            location.pathname = pathname.slice(6);  // "/ja-jp" => Remove 6 letters
+    /**
+     * @returns {void}
+     */
+    #initializeCommonElements() {
+        const pageLanguage = this.#getPageLanguage();
+        this.#loadCommonElements({ language: pageLanguage });
+        this.#initializeHeaderMenuEventHandler();
+        this.#initializeLanguageSelectorEventHandler();
+    }
+
+    /**
+     * @returns {Array<string> | string | undefined}
+     */
+    #getPageLanguage() {
+        const pathname = window.location.pathname;
+        const pathArray = pathname.split("/");
+
+        if (Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
+            return pathArray[1];
         } else {
-            location.pathname = targetLanguage + pathname.slice(6);  // "/ja-jp" => Remove 6 letters
+            return "ja-jp";
         }
-    } else {
-        if (targetLanguage == "ja-jp") {
-            location.pathname = pathname;
+    }
+
+    /** 
+     * @param {{
+     *     language: string,
+     * }}
+     * @returns {void}
+     */
+    #loadCommonElements({ language }) {
+        const _headerProps = {
+            i18n: Page.#i18n[language],
+            toppage: language === "ja-jp" ? "/" : `/${language}/`,
+        };
+        const _footerProps = {
+            language,
+            i18n: Page.#i18n[language],
+        };
+
+        this.#render.build({
+            target: document.querySelector("header"),
+            children: this.#header(_headerProps),
+        });
+
+        this.#render.build({
+            target: document.querySelector("footer"),
+            children: this.#footer(_footerProps),
+        });
+
+        const trying = () => {
+            try {
+                headerMenuButton = document.getElementById("headerMenuButton");
+                headerMenu = document.getElementById("headerMenu");
+            } catch (error) {
+                setTimeout(trying, 100);
+            }
+        }
+        trying();
+    }
+
+    /**
+     * @param {any} props 
+     * @returns {Array<HTMLElement>}
+     */
+    #header(props) {
+        const { $div, $a, $img } = this.#render;
+
+        return [
+            $div({
+                className: "header__content",
+                children: [
+                    $a({
+                        className: "header-logo",
+                        href: props.toppage,
+                        children: [
+                            $img({
+                                className: "header-logo__img",
+                                src: "https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png",
+                                alt: props.i18n.logoImgAlt,
+                            }),
+                        ],
+                    }),
+                    this.#headerMenuButton(),
+                    this.#headerMenu(props),
+                ],
+            }),
+        ];
+    }
+
+    /**
+     * @returns {HTMLElement}
+     */
+    #headerMenuButton() {
+        const { $div } = this.#render;
+
+        this.#$headerMenuButton = $div({
+            id: "headerMenuButton",
+            className: "header-menu-button",
+            children: [
+                this.#materialIcon({ name: "menu", className: "header-menu-button__icon header-menu-button__icon--open" }),
+                this.#materialIcon({ name: "close", className: "header-menu-button__icon header-menu-button__icon--close" }),
+            ],
+        });
+
+        return this.#$headerMenuButton;
+    }
+
+    /**
+     * @param {any} props 
+     * @returns {HTMLElement}
+     */
+    #headerMenu(props) {
+        const { $nav, $ul, $li, $a } = this.#render;
+
+        this.#$headerMenu = $nav({
+            id: "headerMenu",
+            className: "header-menu",
+            children: [
+                $ul({
+                    className: "header-menu__list",
+                    children: [
+                        $li({
+                            className: "header-menu__item",
+                            children: [
+                                $a({
+                                    href: props.toppage,
+                                    textContent: props.i18n.home,
+                                }),
+                            ],
+                        }),
+                        $li({
+                            className: "header-menu__item",
+                            children: [
+                                $a({
+                                    href: "https://www.yoneyo.com/#contact",
+                                    textContent: props.i18n.contact,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
+        });
+
+        return this.#$headerMenu;
+    }
+
+    /**
+     * @param {any} props 
+     * @returns {Array<HTMLElement>}
+     */
+    #footer(props) {
+        const { $nav, $a, $div, $span, $button, $ul, $li, $img, $p } = this.#render;
+
+        /**
+         * @type {HTMLButtonElement}
+         */
+        const $pulldownMenuSelector = $button({
+            className: "pulldown-menu__selector",
+            children: [
+                $span({
+                    className: "pulldown-menu__title",
+                    textContent: "Language",
+                }),
+                this.#materialIcon({ name: "expand_more", className: "pulldown-menu__expand-icon" })
+            ],
+        });
+
+        $pulldownMenuSelector.setAttribute("aria-controls", "langSelectOptions");
+
+        const langToUIText = {
+            "ja-jp": "日本語",
+            "en-us": "English (US)",
+            "ko-kr": "한국어",
+            "zh-cn": "中文 (簡体)",
+            "zh-tw": "中文 (繁体)",
+        }
+
+        /**
+         * 
+         * @param {string} lang 
+         * @returns {HTMLLIElement}
+         */
+        const langSelectOption = (lang) => {
+            const langUIText = langToUIText[lang];
+
+            return $li({
+                className: `pulldown-menu__option ${lang}`,
+                children: [
+                    $button({
+                        textContent: langUIText,
+                    }),
+                ],
+            });
+        };
+
+        /**
+         * @type {HTMLDivElement}
+         */
+        const $langSelector = $div({
+            id: "langSelect",
+            className: "pulldown-menu language-selector",
+            children: [
+                $pulldownMenuSelector,
+                $ul({
+                    id: "langSelectOptions",
+                    className: `pulldown-menu__options ${props.language}`,
+                    children: [
+                        langSelectOption("ja-jp"),
+                        langSelectOption("en-us"),
+                        langSelectOption("ko-kr"),
+                        langSelectOption("zh-cn"),
+                        langSelectOption("zh-tw"),
+                    ],
+                }),
+            ],
+        });
+
+        $langSelector.setAttribute("aria-expanded", "false");
+        $langSelector.setAttribute("aria-controls", "langSelectOptions");
+
+        return [
+            $div({
+                className: "footer__content",
+                children: [
+                    $div({
+                        id: "lang",
+                        className: "footer__language-selector",
+                        children: [
+                            this.#materialIcon({ name: "language", className: "footer__language-selector__open" }),
+                            $langSelector,
+                        ],
+                    }),
+                    $div({
+                        className: "footer-logo",
+                        children: [
+                            $img({
+                                className: "footer-logo__img",
+                                src: "https://cdn.ydits.net/images/ydits_logos/ydits_logo_full_white_transparent.png",
+                                alt: props.i18n.logoImgAlt,
+                            }),
+                            $p({
+                                textContent: "© よね/Yone",
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ];
+    }
+
+    /**
+     * @param {{
+     *     name: string,
+     *     className: string,
+     * }}
+     * @returns {HTMLElement}
+     */
+    #materialIcon({
+        name,
+        className,
+    }) {
+        const { $span } = this.#render;
+
+        return $span({
+            className: `material-symbols-outlined ${className}`,
+            textContent: name,
+        });
+    }
+
+    /**
+     * @returns {void}
+     */
+    #initializeHeaderMenuEventHandler() {
+        const trying = () => {
+            try {
+                this.#$headerMenuButton?.addEventListener("click", () => this.#onClickHeaderMenuButton());
+            } catch (error) {
+                setTimeout(trying, 100);
+            }
+        }
+        trying();
+    }
+
+    /**
+     * @returns {void}
+     */
+    #initializeLanguageSelectorEventHandler() {
+        const langSelectLabelQuery = '#langSelect .pulldown-menu__selector';
+        document.querySelector(langSelectLabelQuery)?.addEventListener("click", () => {
+            // document?.querySelector("#langSelect")?.classList?.toggle("expanded");
+            const $langSelect = document?.querySelector("#langSelect");
+            const toggleTo = $langSelect?.getAttribute("aria-expanded") === "true" ? "false" : "true";
+            $langSelect?.setAttribute("aria-expanded", toggleTo);
+        });
+        Page.#PAGE_LANGUAGES.forEach(lang => {
+            document.querySelector(`.pulldown-menu__option.${lang}`)?.addEventListener("click", () => {
+                this.#changePageLanguage(lang);
+            });
+        });
+    }
+
+    /**
+     * @returns {void}
+     */
+    #onClickHeaderMenuButton() {
+        this.#$headerMenuButton?.classList?.toggle("opened");
+        this.#$headerMenu?.classList?.toggle("active");
+    }
+
+    /**
+     * @param {string} targetLanguage
+     * @returns {void}
+     */
+    #changePageLanguage(targetLanguage) {
+        const pathname = window.location.pathname;
+        const pathArray = pathname.split("/");
+
+        if (Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
+            if (targetLanguage == "ja-jp") {
+                location.pathname = pathname.slice(6);  // "/ja-jp" => Remove 6 letters
+            } else {
+                location.pathname = targetLanguage + pathname.slice(6);  // "/ja-jp" => Remove 6 letters
+            }
         } else {
-            location.pathname = targetLanguage + pathname;
+            if (targetLanguage == "ja-jp") {
+                location.pathname = pathname;
+            } else {
+                location.pathname = targetLanguage + pathname;
+            }
         }
     }
 }
+
+/**
+ * @type {Render}
+ */
+const render = new Render();
+
+/**
+ * @type {Page}
+ */
+const page = new Page({ render });
+
+page.initialize();
