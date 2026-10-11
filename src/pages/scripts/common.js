@@ -64,14 +64,14 @@ class Page {
     #render;
 
     /**
-     * @type {HTMLElement}
+     * @type {HTMLElement | null}
      */
-    #$headerMenu;
+    #$headerMenu = null;
 
     /**
-     * @type {HTMLElement}
+     * @type {HTMLElement | null}
      */
-    #$headerMenuButton;
+    #$headerMenuButton = null;
 
     /**
      * @param {{
@@ -156,13 +156,13 @@ class Page {
     }
 
     /**
-     * @returns {Array<string> | string | undefined}
+     * @returns {Array<string> | string}
      */
     #getPageLanguage() {
         const pathname = window.location.pathname;
         const pathArray = pathname.split("/");
 
-        if (Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
+        if (pathArray[1] === "string" && Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
             return pathArray[1];
         } else {
             return "ja-jp";
@@ -194,16 +194,6 @@ class Page {
             target: document.querySelector("footer"),
             children: this.#footer(_footerProps),
         });
-
-        const trying = () => {
-            try {
-                headerMenuButton = document.getElementById("headerMenuButton");
-                headerMenu = document.getElementById("headerMenu");
-            } catch (error) {
-                setTimeout(trying, 100);
-            }
-        }
-        trying();
     }
 
     /**
@@ -239,9 +229,9 @@ class Page {
      * @returns {HTMLElement}
      */
     #headerMenuButton() {
-        const { $div } = this.#render;
+        const { $button } = this.#render;
 
-        this.#$headerMenuButton = $div({
+        this.#$headerMenuButton = $button({
             id: "headerMenuButton",
             className: "header-menu-button",
             children: [
@@ -249,6 +239,9 @@ class Page {
                 this.#materialIcon({ name: "close", className: "header-menu-button__icon header-menu-button__icon--close" }),
             ],
         });
+
+        this.#$headerMenuButton?.setAttribute("aria-expanded", "false");
+        this.#$headerMenuButton?.setAttribute("aria-controls", "langSelectOptions");
 
         return this.#$headerMenuButton;
     }
@@ -289,6 +282,8 @@ class Page {
                 }),
             ],
         });
+
+        this.#$headerMenu?.setAttribute("aria-controls", "langSelectOptions");
 
         return this.#$headerMenu;
     }
@@ -420,14 +415,16 @@ class Page {
      * @returns {void}
      */
     #initializeHeaderMenuEventHandler() {
-        const trying = () => {
-            try {
-                this.#$headerMenuButton?.addEventListener("click", () => this.#onClickHeaderMenuButton());
-            } catch (error) {
-                setTimeout(trying, 100);
-            }
-        }
-        trying();
+        this.#$headerMenuButton?.addEventListener("click", () => this.#onClickHeaderMenuButton());
+    }
+
+    /**
+     * @returns {void}
+     */
+    #onClickHeaderMenuButton() {
+        const toggleTo = this.#$headerMenuButton?.getAttribute("aria-expanded") === "false" ? "true" : "false";
+        this.#$headerMenuButton?.setAttribute("aria-expanded", toggleTo);
+        this.#$headerMenu?.setAttribute("aria-expanded", toggleTo);
     }
 
     /**
@@ -436,9 +433,8 @@ class Page {
     #initializeLanguageSelectorEventHandler() {
         const langSelectLabelQuery = '#langSelect .pulldown-menu__selector';
         document.querySelector(langSelectLabelQuery)?.addEventListener("click", () => {
-            // document?.querySelector("#langSelect")?.classList?.toggle("expanded");
             const $langSelect = document?.querySelector("#langSelect");
-            const toggleTo = $langSelect?.getAttribute("aria-expanded") === "true" ? "false" : "true";
+            const toggleTo = $langSelect?.getAttribute("aria-expanded") === "false" ? "true" : "false";
             $langSelect?.setAttribute("aria-expanded", toggleTo);
         });
         Page.#PAGE_LANGUAGES.forEach(lang => {
@@ -446,14 +442,6 @@ class Page {
                 this.#changePageLanguage(lang);
             });
         });
-    }
-
-    /**
-     * @returns {void}
-     */
-    #onClickHeaderMenuButton() {
-        this.#$headerMenuButton?.classList?.toggle("opened");
-        this.#$headerMenu?.classList?.toggle("active");
     }
 
     /**

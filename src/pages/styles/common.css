@@ -188,12 +188,13 @@ header {
     z-index: var(--header-menu-button-z-index);
     width: 3.5rem;
     height: 3.5rem;
+    border: none;
     border-radius: 100lvw;
+    box-shadow: #0004 0 0 4px 2px;
     display: none;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    box-shadow: #0004 0 0 4px 2px;
 
     user-select: none;
 
@@ -201,7 +202,7 @@ header {
         display: none;
     }
 
-    &.opened {
+    &[aria-expanded="true"] {
         & .header-menu-button__icon--close {
             display: block;
         }
@@ -246,11 +247,12 @@ header {
         visibility: hidden;
         transition: visibility var(--transition-duration), left var(--transition-duration);
 
-        &.active {
+        &[aria-expanded="true"] {
             left: 0%;
             visibility: visible;
         }
     }
+
 }
 
 .header-menu__list {
