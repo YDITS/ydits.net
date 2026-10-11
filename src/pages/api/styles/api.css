@@ -159,6 +159,12 @@ a {
     font-weight: 700;
 }
 
+/* text */
+
+.text {
+    line-height: 1.75;
+}
+
 /* .api-links */
 
 .api-links {
