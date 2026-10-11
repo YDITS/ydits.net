@@ -277,9 +277,11 @@
         </section>
 
         <section class="section source">
-            <h2 class="section__title source__section-title">情報元</h2>
+            <h2 class="section__title source__section-title">情報取得先</h2>
 
             <div class="section__body source__section-body">
+                <p>本APIは、各データを気象庁から直接取得しています。</p>
+
                 <ul class="list source__list">
                     <li class="list__item source__item">
                         <h3 class="list__item-label source__item-label">
@@ -289,6 +291,10 @@
                         </h3>
 
                         <div class="list__item-content source__item-content">
+                            <p>
+                                緊急地震速報は、気象庁の『地震活動等総合監視システム (EPOS)』から提供され、気象業務支援センターの『緊急地震速報配信システム』から分岐配信される電文を直接取得しています。
+                            </p>
+
                             <ul class="list data__list">
                                 <li class="list__item data__item">
                                     <p>
@@ -313,6 +319,10 @@
                         </h3>
 
                         <div class="list__item-content source__item-content">
+                            <p>
+                                防災気象情報は、気象庁ホームページで提供される『防災情報XMLフォーマット電文 (PULL型)』から電文を直接取得しています。
+                            </p>
+
                             <ul class="list data__list">
                                 <li class="list__item data__item">
                                     <p>

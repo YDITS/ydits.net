@@ -232,14 +232,21 @@ a {
 /* source */
 
 .source {
-    align-items: stretch;
     max-width: 1024px;
+    align-items: stretch;
+}
+
+.source__section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .source__list {
-    list-style: none;
+    border-top: 1px solid #c0c0c0ff;
     padding-left: 0;
     gap: 1rem;
+    list-style: none;
 }
 
 .source__item {
@@ -251,7 +258,7 @@ a {
 
     gap: 1rem;
 
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
 
     &:first-child {
         border-top: none;
@@ -263,7 +270,10 @@ a {
 }
 
 .source__item-content {
+    display: flex;
+    flex-direction: column;
     padding-left: 1rem;
+    gap: 1rem;
 }
 
 /* data */
