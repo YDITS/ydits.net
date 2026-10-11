@@ -105,20 +105,31 @@
         <div class="header__content">
             <a class="header-logo" href="/">
                 <img class="header-logo__img"
-                    src="https://cdn.ydits.net/images/ydits-logos/ydits_logo_white_transparent.png" alt="YDITSのロゴ">
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png" alt="YDITSのロゴ">
             </a>
 
-            <div id="headerMenuButton" class="header-menu-button">
-                <span
-                    class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">menu</span>
-                <span
-                    class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--close">close</span>
-            </div>
+            <button id="headerMenuButton" class="header-menu-button" aria-expanded="false"
+                aria-controls="langSelectOptions">
+                <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">
+                    menu
+                </span>
+                <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--close">
+                    close
+                </span>
+            </button>
 
-            <nav id="headerMenu" class="header-menu">
+            <nav id="headerMenu" class="header-menu" aria-controls="langSelectOptions">
                 <ul class="header-menu__list">
-                    <li class="header-menu__item"><a href="/">ホーム</a></li>
-                    <li class="header-menu__item"><a href="https://www.yoneyo.com/#contact">お問い合わせ</a></li>
+                    <li class="header-menu__item">
+                        <a href="/">
+                            ホーム
+                        </a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="https://www.yoneyo.com/#contact">
+                            お問い合わせ
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
