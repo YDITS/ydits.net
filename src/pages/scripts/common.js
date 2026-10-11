@@ -240,8 +240,8 @@ class Page {
             ],
         });
 
+        this.#$headerMenuButton?.setAttribute("aria-controls", "headerMenu");
         this.#$headerMenuButton?.setAttribute("aria-expanded", "false");
-        this.#$headerMenuButton?.setAttribute("aria-controls", "langSelectOptions");
 
         return this.#$headerMenuButton;
     }
@@ -283,7 +283,7 @@ class Page {
             ],
         });
 
-        this.#$headerMenu?.setAttribute("aria-controls", "langSelectOptions");
+        this.#$headerMenu?.setAttribute("aria-expanded", "false");
 
         return this.#$headerMenu;
     }
@@ -359,8 +359,8 @@ class Page {
             ],
         });
 
-        $langSelector.setAttribute("aria-expanded", "false");
         $langSelector.setAttribute("aria-controls", "langSelectOptions");
+        $langSelector.setAttribute("aria-expanded", "false");
 
         return [
             $div({
