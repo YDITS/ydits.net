@@ -32,27 +32,27 @@ class Page {
      */
     static #i18n = {
         "ja-jp": {
-            "logoImgAlt": "YDITSのロゴ",
+            "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "ホーム",
             "contact": "お問い合わせ",
         },
         "en-us": {
-            "logoImgAlt": "YDITS's logo",
+            "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "Home",
             "contact": "Contact Me",
         },
         "ko-kr": {
-            "logoImgAlt": "YDITS's logo",
+            "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "홈",
             "contact": "문의",
         },
         "zh-cn": {
-            "logoImgAlt": "YDITS's logo",
+            "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "首页",
             "contact": "联络",
         },
         "zh-tw": {
-            "logoImgAlt": "YDITS's logo",
+            "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "首頁",
             "contact": "聯絡",
         },
