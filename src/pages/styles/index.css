@@ -139,7 +139,7 @@
     box-sizing: border-box;
     padding: 0 2rem;
     width: 100%;
-    max-width: 48rem;
+    max-width: var(--max-width-medium);
 }
 
 .apps__body {
@@ -157,7 +157,7 @@
     box-sizing: border-box;
     padding: 0 2rem;
     width: 100%;
-    max-width: 48rem;
+    max-width: var(--max-width-medium);
 }
 
 .api__body {
@@ -218,5 +218,5 @@
 
 .adsense {
     width: 100%;
-    max-width: 48rem;
+    max-width: var(--max-width-medium);
 }
