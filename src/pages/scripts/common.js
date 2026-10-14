@@ -183,6 +183,7 @@ class Page {
         const _footerProps = {
             language,
             i18n: Page.#i18n[language],
+            toppage: language === "ja-jp" ? "/" : `/${language}/`,
         };
 
         this.#render.build({
@@ -251,35 +252,13 @@ class Page {
      * @returns {HTMLElement}
      */
     #headerMenu(props) {
-        const { $nav, $ul, $li, $a } = this.#render;
+        const { $div } = this.#render;
 
-        this.#$headerMenu = $nav({
+        this.#$headerMenu = $div({
             id: "headerMenu",
             className: "header-menu",
             children: [
-                $ul({
-                    className: "header-menu__list",
-                    children: [
-                        $li({
-                            className: "header-menu__item",
-                            children: [
-                                $a({
-                                    href: props.toppage,
-                                    textContent: props.i18n.home,
-                                }),
-                            ],
-                        }),
-                        $li({
-                            className: "header-menu__item",
-                            children: [
-                                $a({
-                                    href: "https://www.yoneyo.com/#contact",
-                                    textContent: props.i18n.contact,
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
+                this.#navLinks({ props, id: "headerNavLinks" }),
             ],
         });
 
@@ -364,16 +343,17 @@ class Page {
 
         return [
             $div({
+                id: "lang",
+                className: "footer__language-selector",
+                children: [
+                    this.#materialIcon({ name: "language", className: "footer__language-selector__open" }),
+                    $langSelector,
+                ],
+            }),
+            $div({
                 className: "footer__content",
                 children: [
-                    $div({
-                        id: "lang",
-                        className: "footer__language-selector",
-                        children: [
-                            this.#materialIcon({ name: "language", className: "footer__language-selector__open" }),
-                            $langSelector,
-                        ],
-                    }),
+                    this.#navLinks({ props, id: "footerNavLinks" }),
                     $div({
                         className: "footer-logo",
                         children: [
@@ -408,6 +388,47 @@ class Page {
         return $span({
             className: `material-symbols-outlined ${className}`,
             textContent: name,
+        });
+    }
+
+    /**
+     * @param {{
+     *     props: any, 
+     *     id: string,
+     * }} props 
+     * @returns {HTMLElement}
+     */
+    #navLinks({ props, id }) {
+        const { $nav, $ul, $li, $a } = this.#render;
+
+        return $nav({
+            id: id,
+            className: "nav-links",
+            children: [
+                $ul({
+                    className: "nav-links__list",
+                    children: [
+                        $li({
+                            className: "nav-links__item",
+                            children: [
+                                $a({
+                                    href: props.toppage,
+                                    textContent: props.i18n.home,
+                                }),
+                            ],
+                        }),
+                        $li({
+                            className: "nav-links__item",
+                            children: [
+                                $a({
+                                    href: "https://www.yoneyo.com/#contact",
+                                    textContent: props.i18n.contact,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
         });
     }
 

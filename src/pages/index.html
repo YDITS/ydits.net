@@ -119,30 +119,33 @@
                     alt="YDITSのロゴ (ホワイト)">
             </a>
 
-            <button id="headerMenuButton" class="header-menu-button" aria-expanded="false"
-                aria-controls="langSelectOptions">
+            <button id="headerMenuButton" class="header-menu-button" aria-controls="headerMenu" aria-expanded="false">
                 <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--open">
                     menu
                 </span>
+
                 <span class="material-symbols-outlined header-menu-button__icon header-menu-button__icon--close">
                     close
                 </span>
             </button>
 
-            <nav id="headerMenu" class="header-menu" aria-controls="langSelectOptions">
-                <ul class="header-menu__list">
-                    <li class="header-menu__item">
-                        <a href="/">
-                            ホーム
-                        </a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="https://www.yoneyo.com/#contact" target="_blank" rel="noopener me">
-                            お問い合わせ
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="headerMenu" class="header-menu" aria-expanded="false">
+                <nav id="headerNavLinks" class="nav-links">
+                    <ul class="nav-links__list">
+                        <li class="nav-links__item">
+                            <a href="/">
+                                ホーム
+                            </a>
+                        </li>
+
+                        <li class="nav-links__item">
+                            <a href="https://www.yoneyo.com/#contact">
+                                お問い合わせ
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -354,52 +357,77 @@
     </main>
 
     <footer>
-        <div class="footer__content">
-            <div id="lang" class="footer__language-selector">
-                <span class="material-symbols-outlined footer__language-selector__open">
-                    language
-                </span>
-                <div class="pulldown-menu language-selector" id="langSelect" aria-expanded="false">
-                    <button class="pulldown-menu__selector">
-                        <span class="pulldown-menu__title">Language</span>
-                        <span class="pulldown-menu__expand-icon material-symbols-outlined">expand_more</span>
-                    </button>
+        <div id="lang" class="footer__language-selector">
+            <span class="material-symbols-outlined footer__language-selector__open">
+                language
+            </span>
 
-                    <ul class="pulldown-menu__options">
-                        <li class="pulldown-menu__option ja-jp" style="font-weight: bold;">
-                            <button>
-                                日本語
-                            </button>
-                        </li>
-                        <li class="pulldown-menu__option en-us">
-                            <button>
-                                English (US)
-                            </button>
-                        </li>
-                        <li class="pulldown-menu__option ko-kr">
-                            <button>
-                                한국어
-                            </button>
-                        </li>
-                        <li class="pulldown-menu__option zh-cn">
-                            <button>
-                                中文 (簡体)
-                            </button>
-                        </li>
-                        <li class="pulldown-menu__option zh-tw">
-                            <button>
-                                中文 (繁体)
-                            </button>
-                        </li>
-                    </ul>
-                </div>
+            <div id="langSelect" class="pulldown-menu language-selector" aria-controls="langSelectOptions"
+                aria-expanded="false">
+                <button class="pulldown-menu__selector" aria-controls="langSelectOptions">
+                    <span class="pulldown-menu__title">
+                        Language
+                    </span>
+
+                    <span class="material-symbols-outlined pulldown-menu__expand-icon">
+                        expand_more
+                    </span>
+                </button>
+
+                <ul id="langSelectOptions" class="pulldown-menu__options ja-jp">
+                    <li class="pulldown-menu__option ja-jp">
+                        <button>
+                            日本語
+                        </button>
+                    </li>
+                    <li class="pulldown-menu__option en-us">
+                        <button>
+                            English (US)
+                        </button>
+                    </li>
+                    <li class="pulldown-menu__option ko-kr">
+                        <button>
+                            한국어
+                        </button>
+                    </li>
+                    <li class="pulldown-menu__option zh-cn">
+                        <button>
+                            中文 (簡体)
+                        </button>
+                    </li>
+                    <li class="pulldown-menu__option zh-tw">
+                        <button>
+                            中文 (繁体)
+                        </button>
+                    </li>
+                </ul>
             </div>
+        </div>
+
+        <div class="footer__content">
+            <nav id="footerNavLinks" class="nav-links">
+                <ul class="nav-links__list">
+                    <li class="nav-links__item">
+                        <a href="/">
+                            ホーム
+                        </a>
+                    </li>
+
+                    <li class="nav-links__item">
+                        <a href="https://www.yoneyo.com/#contact">
+                            お問い合わせ
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="footer-logo">
                 <img class="footer-logo__img"
-                    src="https://cdn.ydits.net/images/ydits-logos/ydits_logo_full_white_transparent.png"
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_full_white_transparent.png"
                     alt="YDITSのフルサイズロゴ (ホワイト)">
-                <p>© よね/Yone</p>
+                <p>
+                    © よね/Yone
+                </p>
             </div>
         </div>
     </footer>

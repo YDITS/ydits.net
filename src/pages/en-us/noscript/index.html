@@ -52,23 +52,27 @@
         <div class="header__content">
             <a class="header-logo" href="/">
                 <img class="header-logo__img"
-                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png" alt="YDITSのロゴ">
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_white_transparent.png"
+                    alt="YDITS's Logo (White)">
             </a>
 
-            <nav id="headerMenu" class="header-menu" aria-controls="langSelectOptions">
-                <ul class="header-menu__list">
-                    <li class="header-menu__item">
-                        <a href="/">
-                            ホーム
-                        </a>
-                    </li>
-                    <li class="header-menu__item">
-                        <a href="https://www.yoneyo.com/#contact" target="_blank" rel="noopener me">
-                            お問い合わせ
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="headerMenu" class="header-menu" aria-expanded="false">
+                <nav id="headerNavLinks" class="nav-links">
+                    <ul class="nav-links__list">
+                        <li class="nav-links__item">
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-links__item">
+                            <a href="https://www.yoneyo.com/#contact">
+                                Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -85,10 +89,29 @@
 
     <footer>
         <div class="footer__content">
+            <nav id="footerNavLinks" class="nav-links">
+                <ul class="nav-links__list">
+                    <li class="nav-links__item">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-links__item">
+                        <a href="https://www.yoneyo.com/#contact">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="footer-logo">
                 <img class="footer-logo__img"
-                    src="https://cdn.ydits.net/images/ydits-logos/ydits_logo_full_white_transparent.png" alt="YDITSのロゴ">
-                <p>© よね/Yone</p>
+                    src="https://cdn.ydits.net/images/ydits_logos/ydits_logo_full_white_transparent.png"
+                    alt="YDITS's Full Size Logo (White)">
+                <p>
+                    © よね/Yone
+                </p>
             </div>
         </div>
     </footer>
