@@ -41,9 +41,10 @@
     --origin-alert-height: 4rem;
 
     /* z-index */
-    --header-z-index: 120;
-    --header-menu-z-index: 110;
+    --header-z-index: 100;
+    --header-menu-z-index: 120;
     --header-menu-button-z-index: 130;
+    --pulldown-menu-option-z-index: 110;
     --origin-alert-z-index: 200;
 
     scroll-padding-block-start: var(--header-height);
@@ -565,6 +566,7 @@ footer {
     position: absolute;
     top: auto;
     bottom: calc(100% + 2em);
+    z-index: var(--pulldown-menu-option-z-index);
     min-width: calc(10em + 1em);
     border-radius: 0.5rem;
     display: none;
