@@ -41,10 +41,10 @@
     --origin-alert-height: 4rem;
 
     /* z-index */
-    --header-z-index: 20;
-    --header-menu-z-index: 10;
-    --header-menu-button-z-index: 30;
-    --origin-alert-z-index: 100;
+    --header-z-index: 120;
+    --header-menu-z-index: 110;
+    --header-menu-button-z-index: 130;
+    --origin-alert-z-index: 200;
 
     scroll-padding-block-start: var(--header-height);
     scroll-behavior: smooth;
