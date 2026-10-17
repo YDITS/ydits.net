@@ -34,26 +34,36 @@ class Page {
         "ja-jp": {
             "logoImgAlt": "YDITSのロゴ (ホワイト)",
             "home": "ホーム",
+            "guidelineCompliance": "ガイドライン対応状況",
+            "policies": "利用規約・プライバシーポリシー",
             "contact": "お問い合わせ",
         },
         "en-us": {
-            "logoImgAlt": "YDITSのロゴ (ホワイト)",
+            "logoImgAlt": "YDITS's Logo (White)",
             "home": "Home",
+            "guidelineCompliance": "Guideline Compliance",
+            "policies": "Terms of Service & Privacy Policies",
             "contact": "Contact Me",
         },
         "ko-kr": {
-            "logoImgAlt": "YDITSのロゴ (ホワイト)",
+            "logoImgAlt": "YDITS's Logo (White)",
             "home": "홈",
+            "guidelineCompliance": "가이드라인 준수 현황",
+            "policies": "이용약관 · 개인정보 처리방침",
             "contact": "문의",
         },
         "zh-cn": {
-            "logoImgAlt": "YDITSのロゴ (ホワイト)",
+            "logoImgAlt": "YDITS's Logo (White)",
             "home": "首页",
+            "guidelineCompliance": "指南遵循情况",
+            "policies": "服务条款 · 隐私政策",
             "contact": "联络",
         },
         "zh-tw": {
-            "logoImgAlt": "YDITSのロゴ (ホワイト)",
+            "logoImgAlt": "YDITS's Logo (White)",
             "home": "首頁",
+            "guidelineCompliance": "指南遵循情況",
+            "policies": "服務條款 · 隱私權政策",
             "contact": "聯絡",
         },
     }
@@ -162,7 +172,7 @@ class Page {
         const pathname = window.location.pathname;
         const pathArray = pathname.split("/");
 
-        if (pathArray[1] === "string" && Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
+        if (typeof pathArray[1] === "string" && Page.#PAGE_LANGUAGES.includes(pathArray[1])) {
             return pathArray[1];
         } else {
             return "ja-jp";
@@ -414,6 +424,24 @@ class Page {
                                 $a({
                                     href: props.toppage,
                                     textContent: props.i18n.home,
+                                }),
+                            ],
+                        }),
+                        $li({
+                            className: "nav-links__item",
+                            children: [
+                                $a({
+                                    href: "/eew-guideline/",
+                                    textContent: props.i18n.guidelineCompliance,
+                                }),
+                            ],
+                        }),
+                        $li({
+                            className: "nav-links__item",
+                            children: [
+                                $a({
+                                    href: "https://policies.ydits.net/",
+                                    textContent: props.i18n.policies,
                                 }),
                             ],
                         }),

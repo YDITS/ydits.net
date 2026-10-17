@@ -267,7 +267,6 @@ header {
 /* nav-links */
 
 .nav-links {
-    width: 100%;
     max-width: var(--max-width-large);
 }
 
@@ -276,18 +275,17 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 
     @media (width < 769px) {
         flex-direction: column;
         align-items: start;
-        gap: 2rem;
+        gap: 1.25rem;
     }
 }
 
 .nav-links__item {
     height: 80%;
-    width: 8rem;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
