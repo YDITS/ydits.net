@@ -67,7 +67,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/noscript/styles/index.css">
+    <link rel="stylesheet" href="/styles/error.css">
 </head>
 
 <body>
@@ -99,19 +99,24 @@
         </div>
     </header>
 
-    <main>
-        <section id="main">
-            <noscript>
-                <h1>JavaScript が無効</h1>
+    <main class="error">
+        <noscript>
+            <h1 class="error__title">JavaScript が無効</h1>
 
-                <p>
-                    お使いのブラウザでは、JavaScript が無効になっているか、または許可されていません。<br>
-                    当サイトを閲覧するには JavaScript が必要です。
-                </p>
-            </noscript>
+            <p class="error__description">
+                お使いのブラウザでは、JavaScript が無効になっているか、または許可されていません。<br>
+                当サイトを閲覧するには JavaScript が必要です。
+            </p>
+        </noscript>
 
-            <a href="/">再読み込み</a>
-        </section>
+        <a class="link link-button error__button error__link" href="/">
+            <div class="wrapper">
+                再読み込み
+                <span class="material-symbols-outlined">
+                    double_arrow
+                </span>
+            </div>
+        </a>
     </main>
 
     <footer>

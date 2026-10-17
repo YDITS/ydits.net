@@ -67,7 +67,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/common.css">
-    <link rel="stylesheet" href="/noscript/styles/index.css">
+    <link rel="stylesheet" href="/styles/error.css">
 </head>
 
 <body>
@@ -99,15 +99,24 @@
         </div>
     </header>
 
-    <main>
-        <section id="main">
-            <h1>JavaScript is invalid</h1>
-            <p>
+    <main class="error">
+        <noscript>
+            <h1 class="error__title">JavaScript is invalid</h1>
+
+            <p class="error__description">
                 JavaScript is not activated or permitted in your browser.<br>
                 JavaScript is required to view this site.
             </p>
-            <a href="/en-us/">Reload</a>
-        </section>
+        </noscript>
+
+        <a class="link link-button error__button error__link" href="/en-us/">
+            <div class="wrapper">
+                Reload
+                <span class="material-symbols-outlined">
+                    double_arrow
+                </span>
+            </div>
+        </a>
     </main>
 
     <footer>
