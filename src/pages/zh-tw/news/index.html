@@ -13,83 +13,125 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
 
-    <!----- meta ----->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="YDITS">
+    <!-- Meta -->
     <title>新聞 - YDITS官網</title>
-
+    <meta name="description" content="是迅速向使用者提供最佳防災資訊的服務'YDITS'的官方網站。">
     <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.ydits.net/news/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YDITS官網">
+    <meta property="og:title" content="新聞">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YDITS_JP">
+
+    <!-- Alternates -->
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/news/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/news/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/news/">
     <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/news/">
     <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/news/">
 
-    <!--- OGP --->
-    <meta property="og:url" content="https://www.ydits.net/news/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="YDITS官網">
-    <meta property="og:title" content="新聞">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YDITS_JP">
-
-    <!----- Links ----->
-    <base href="https://www.ydits.net/">
-
-    <!--- Styles --->
-    <!-- Fonts -->
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
 
-    <!-- Material Symbols -->
+    <!-- Icons -->
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png" sizes="2048x2048">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png"
+        sizes="2048x2048">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,double_arrow,expand_more,language,menu,open_in_new&display=block">
 
-    <!-- main -->
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./news/Styles/index.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/news/styles/index.css">
 
-    <!--- icon --->
-    <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
+    <!-- Preloads -->
+    <link rel="modulepreload" href="/scripts/common.js">
 
-    <!----- Scripts ----->
-    <script src="./Scripts/jquery-3.6.0.min.js"></script>
-    <script src="./Scripts/common.js"></script>
-    <script src="./zh-tw/Scripts/common.js"></script>
+    <!-- Scripts -->
+    <script src="/scripts/common.js" type="module"></script>
 
     <noscript>
         <meta http-equiv="refresh" content="0; URL=./noscript/">
     </noscript>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DFN4DKGM3F');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
+        crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <section id="main">
-            <h1 id="pageTitle">新聞</h1>
+        <article id="main" class="article main">
+            <h1 id="pageTitle" class="article__title main__title">
+                新聞
+            </h1>
 
-            <section id="newsList">
-                <ol class="lists">
-                    <li class="list">
-                        <a class="title link-inline" href="news/2023/07/1701/">YDITS利用規約 改訂のお知らせ</a>
-                        <span class="date">2023年7月17日</span>
+            <section id="newsList" class="section news">
+                <ol class="lists news__ol">
+                    <li class="list news__li">
+                        <a class="news__title title link-inline" href="news/2023/07/1701/">
+                            YDITS利用規約 改訂のお知らせ</a>
+                        <span class="news__date date">2023年7月17日</span>
                     </li>
-                    <li class="list">
-                        <a class="title link-inline" href="news/2022/12/1401/">YDITS for Web的地震預警來源發生變化的通知</a>
-                        <span class="date">2022年12月14日</span>
+                    <li class="list news__li">
+                        <a class="news__title title link-inline" href="news/2022/12/1401/">
+                            YDITS for Web 的地震預警來源發生變化的通知</a>
+                        <span class="news__date date">2022年12月14日</span>
                     </li>
-                    <li class="list">
-                        <a class="title link-inline" href="news/2022/07/0201/">YDITS的使用條款已修訂</a>
-                        <span class="date">2022年7月2日</span>
+                    <li class="list news__li">
+                        <a class="news__title title link-inline" href="news/2022/07/0201/">
+                            YDITS 的使用條款已修訂</a>
+                        <span class="news__date date">2022年7月2日</span>
                     </li>
                 </ol>
             </section>
-        </section>
+
+            <!-- Google AdSense -->
+            <section class="adsense">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4842259448644646"
+                    data-ad-slot="6212268717" data-ad-format="auto" data-full-width-responsive="true">
+                </ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+            <!-- /Google AdSense -->
+        </article>
     </main>
 
     <footer></footer>

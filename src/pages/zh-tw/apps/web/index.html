@@ -8,76 +8,97 @@
     https://github.com/YDITS/ydits.net
 
 -->
-<html lang="zh-tw">
+<html lang="zh-TW">
 
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
 
-    <!----- meta ----->
+    <!-- Meta -->
+    <title>YDITS for Web | YDITS官網</title>
+    <meta name="description" content="YDITS for Web 的官方頁面。">
+    <meta name="color-scheme" content="light">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YDITS for Web的官方頁面。">
-    <meta name="keywords" content="YDITS">
-    <title>YDITS for Web - YDITS官網</title>
+    <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
-    <meta name="color-scheme" content="dark">
-
-    <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/web/">
-    <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/web/">
-    <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/web/">
-    <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/web/">
-    <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/web/">
-
-    <!--- OGP --->
-    <meta property="og:url" content="https://www.ydits.net/news/">
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.ydits.net/apps/web/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="YDITS官網">
     <meta property="og:title" content="YDITS for Web">
-    <meta property="og:description" content="YDITS for Web的官方頁面。">
+    <meta property="og:description" content="YDITS for Web 的官方頁面。">
+
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@yone1130_">
+    <meta name="twitter:site" content="@YDITS_JP">
 
-    <!----- Links ----->
-    <base href="https://www.ydits.net/">
+    <!-- Alternates -->
+    <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/apps/web/">
+    <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/apps/web/">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/apps/web/">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/apps/web/">
+    <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/apps/web/">
 
-    <!--- Styles --->
-    <!-- Fonts -->
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
 
-    <!-- Material Symbols -->
+    <!-- Icons -->
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png" sizes="2048x2048">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png"
+        sizes="2048x2048">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,double_arrow,expand_more,language,menu,open_in_new&display=block">
 
-    <!-- main -->
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./web/Styles/index.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/apps/web/styles/index.css">
 
-    <!--- icon --->
-    <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-
-    <!----- Scripts ----->
-    <script src="./Scripts/jquery-3.6.0.min.js"></script>
-    <script src="./Scripts/common.js"></script>
-    <script src="./zh-tw/Scripts/common.js"></script>
+    <!-- Scripts -->
+    <script src="/scripts/common.js" type="module"></script>
 
     <noscript>
         <meta http-equiv="refresh" content="0; URL=./noscript/">
     </noscript>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DFN4DKGM3F');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="section">
             <div class="title">YDITS for Web</div>
+            <div class="scroll-guide-line"></div>
         </section>
 
-        <section id="main">
+        <section id="main" class="section">
             <section class="sections" id="message">
                 <p>
                     YDITS for Web是一個網站，<br>
@@ -85,13 +106,13 @@
                 </p>
             </section>
 
-            <section class="sections" id="versions">
-                <h2 class="sectionTitle">版本歷史</h2>
+            <section class="sections" id="use">
+                <h2 class="section-title sectionTitle">現在可以使用</h2>
 
                 <div class="link" id="link_news">
-                    <a class="link-button" href="./zh-tw/web/versions/">
+                    <a class="link-button" href="https://webapp.ydits.net/">
                         <div class="wrapper">
-                            版本歷史
+                            YDITS for Web
                             <span class="material-symbols-outlined">
                                 double_arrow
                             </span>
@@ -100,13 +121,13 @@
                 </div>
             </section>
 
-            <section class="sections" id="use">
-                <h2 class="sectionTitle">現在可以使用</h2>
+            <section class="sections" id="versions">
+                <h2 class="section-title sectionTitle">版本歷史</h2>
 
                 <div class="link" id="link_news">
-                    <a class="link-button" href="https://webapp.ydits.net/">
+                    <a class="link-button" href="./versions/">
                         <div class="wrapper">
-                            YDITS for Web
+                            版本歷史
                             <span class="material-symbols-outlined">
                                 double_arrow
                             </span>
