@@ -13,80 +13,114 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
 
-    <!----- meta ----->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta -->
+    <title>최신 정보 | YDITS</title>
     <meta name="description" content="YDITS의 최신 정보를 확인하실 수 있습니다.">
-    <meta name="keywords" content="YDITS">
-    <title>최신 정보 - YDITS</title>
+    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
-    <meta name="color-scheme" content="dark">
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.ydits.net/ko-kr/news/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="YDITS 공식 사이트">
+    <meta property="og:title" content="최신 정보">
+    <meta property="og:description" content="YDITS의 최신 정보를 확인하실 수 있습니다.">
 
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@YDITS_JP">
+
+    <!-- Alternates -->
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/news/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/news/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/news/">
     <link rel="alternate" hreflang="zh-TW" href="https://www.ydits.net/zh-tw/news/">
     <link rel="alternate" hreflang="ko-KR" href="https://www.ydits.net/ko-kr/news/">
 
-    <!--- OGP --->
-    <meta property="og:url" content="https://www.ydits.net/ko-kr/news/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="YDITS 공식 사이트">
-    <meta property="og:title" content="최신 정보">
-    <meta property="og:description" content="YDITS의 최신 정보를 확인하실 수 있습니다.">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@YDITS_JP">
-
-    <!----- Links ----->
-    <base href="https://www.ydits.net/">
-
-    <!--- Styles --->
-    <!-- Fonts -->
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.yoneyo.com">
+    <link rel="preconnect" href="https://cdn.ydits.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
 
-    <!-- Material Symbols -->
+    <!-- Icons -->
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png" sizes="2048x2048">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png"
+        sizes="2048x2048">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
+        sizes="512x512">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
+        sizes="192x192">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/local-noto-sans-jp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,double_arrow,expand_more,language,menu,open_in_new&display=block">
 
-    <!-- main -->
-    <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="./news/Styles/index.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/news/styles/index.css">
 
-    <!--- icon --->
-    <link rel="icon" type="image/png" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits_logos/ydits_icon.png">
+    <!-- Preloads -->
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js" crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/version-js@1.4.0/dist/version.js" crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/app/app.js" crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/component/component.js"
+        crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/element.js"
+        crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/elements.js"
+        crossorigin>
 
-    <!----- Scripts ----->
-    <script src="./Scripts/jquery-3.6.0.min.js"></script>
-    <script src="./Scripts/common.js"></script>
-    <script src="./ko-kr/Scripts/common.js"></script>
+    <link rel="modulepreload" href="/scripts/common.js">
+
+    <!-- Scripts -->
+    <script src="/scripts/common.js" type="module"></script>
+
     <noscript>
-        <meta http-equiv="refresh" content="0; URL=./ko-kr/noscript/">
+        <meta http-equiv="refresh" content="0; URL=/ko-kr/noscript/">
     </noscript>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFN4DKGM3F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DFN4DKGM3F');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4842259448644646"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header></header>
 
     <main>
-        <section id="main">
-            <h1 id="pageTitle">최신 정보</h1>
+        <section id="main" class="article main">
+            <h1 id="pageTitle" class="article__title main__title">최신 정보</h1>
 
-            <section id="newsList">
-                <ol class="lists">
-                    <li class="list">
-                        <a class="title link-inline" href="news/2023/07/1701/">YDITS 이용약관 개정 공지</a>
-                        <span class="date">2023년 7월 17일</span>
+            <section id="newsList" class="section news">
+                <ol class="news__ol">
+                    <li class="news__li">
+                        <a class="news__title link-inline" href="./2023/07/1701/">YDITS 이용약관 개정 공지</a>
+                        <span class="news__date">2023년 7월 17일</span>
                     </li>
-                    <li class="list">
-                        <a class="title link-inline" href="news/2022/12/1401/">YDITS for Web 긴급지진속보 취득처 변경 공지</a>
-                        <span class="date">2022년 12월 14일</span>
+                    <li class="news__li">
+                        <a class="news__title link-inline" href="./2022/12/1401/">YDITS for Web 긴급지진속보 취득처 변경 공지</a>
+                        <span class="news__date">2022년 12월 14일</span>
                     </li>
-                    <li class="list">
-                        <a class="title link-inline" href="news/2022/07/0201/">YDITS 이용약관 개정 공지</a>
-                        <span class="date">2022년 7월 2일</span>
+                    <li class="news__li">
+                        <a class="news__title link-inline" href="./2022/07/0201/">YDITS 이용약관 개정 공지</a>
+                        <span class="news__date">2022년 7월 2일</span>
                     </li>
                 </ol>
             </section>
