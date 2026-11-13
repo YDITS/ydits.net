@@ -156,11 +156,11 @@
     padding: 0;
     box-sizing: border-box;
     font: inherit;
+}
 
-    &:focus-visible {
-        outline: 4px solid var(--focus-color);
-        outline-offset: 4px;
-    }
+*:focus-visible {
+    outline: 4px solid var(--focus-color);
+    outline-offset: 4px;
 }
 
 body {
