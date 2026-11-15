@@ -10,15 +10,16 @@
 -->
 <html lang="ja-JP">
 
-<head prefix="og: https://ogp.me/ns#">
+<head>
     <meta charset="UTF-8">
 
     <!-- Meta -->
     <title>YDITS for Web | YDITS公式サイト</title>
     <meta name="description"
         content="『YDITS for Web』は、防災情報をすぐに確認できるWebアプリケーションです。いま発表されている緊急地震速報、現在地の予想震度と主要動到達カウントダウン、直近の地震情報の履歴、台風の予想進路図、雨雲レーダーを表示します。">
-    <meta name="color-scheme" content="light">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#FFFFFF">
     <meta name="google-adsense-account" content="ca-pub-4842259448644646">
 
     <!-- OGP -->
@@ -29,11 +30,17 @@
     <meta property="og:description"
         content="『YDITS for Web』は、防災情報をすぐに確認できるWebアプリケーションです。いま発表されている緊急地震速報、現在地の予想震度と主要動到達カウントダウン、直近の地震情報の履歴、台風の予想進路図、雨雲レーダーを表示します。">
     <meta property="og:image" content="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2048">
+    <meta property="og:image:height" content="2048">
+    <meta property="og:image:alt" content="YDITSのアイコン">
+    <meta property="og:locale" content="ja_JP">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@YDITS_JP">
 
-    <!-- Alternates -->
+    <!-- Canonical & Alternates -->
+    <link rel="canonical" href="https://www.ydits.net/apps/web/">
     <link rel="alternate" hreflang="ja-JP" href="https://www.ydits.net/apps/web/">
     <link rel="alternate" hreflang="en-US" href="https://www.ydits.net/en-us/apps/web/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.ydits.net/zh-cn/apps/web/">
@@ -53,12 +60,8 @@
         sizes="512x512">
     <link rel="icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
         sizes="192x192">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon.png" type="image/png"
-        sizes="2048x2048">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_512px.png" type="image/png"
-        sizes="512x512">
-    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_192px.png" type="image/png"
-        sizes="192x192">
+    <link rel="apple-touch-icon" href="https://cdn.ydits.net/images/ydits-logos/ydits_icon_180px.png" type="image/png"
+        sizes="180x180">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdn.yoneyo.com/styles/fonts/noto-sans/noto-sans-local.css">
@@ -72,15 +75,12 @@
     <link rel="stylesheet" href="./styles/index.css">
 
     <!-- Preloads -->
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js" crossorigin>
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/version-js@1.4.0/dist/version.js" crossorigin>
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/app/app.js" crossorigin>
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/component/component.js"
-        crossorigin>
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/element.js"
-        crossorigin>
-    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/elements.js"
-        crossorigin>
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/render.js">
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/version-js@1.4.0/dist/version.js">
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/app/app.js">
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/component/component.js">
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/element.js">
+    <link rel="modulepreload" href="https://cdn.yoneyo.com/scripts/render-js@1.0.0-beta.2/dist/elements/elements.js">
 
     <link rel="modulepreload" href="/scripts/common.js">
 
