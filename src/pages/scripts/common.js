@@ -225,6 +225,8 @@ class Page {
                             $img({
                                 className: "header-logo__img",
                                 src: "https://cdn.ydits.net/images/ydits-logos/ydits_logo_white_transparent.png",
+                                width: 1536,
+                                height: 578,
                                 alt: props.i18n.logoImgAlt,
                             }),
                         ],
@@ -370,6 +372,8 @@ class Page {
                             $img({
                                 className: "footer-logo__img",
                                 src: "https://cdn.ydits.net/images/ydits-logos/ydits_logo_full_white_transparent.png",
+                                width: 1536,
+                                height: 832,
                                 alt: props.i18n.logoImgAlt,
                             }),
                             $p({
